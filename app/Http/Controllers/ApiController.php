@@ -9,10 +9,11 @@ use VK\OAuth\VKOAuth;
 class ApiController extends Controller
 {
     public $lala2;
+
     public function index(Request $request)
     {
-       $this->lala2 = $_GET['code'];
-       //dd($this->lala2);
+        $this->lala2 = $_GET['code'];
+        //dd($this->lala2);
 
         $oauth = new VKOAuth();
         $client_id = 7436120;
@@ -45,11 +46,6 @@ class ApiController extends Controller
             'count' => '30',
         ));
         dd($response);
-
-
-
-
-
     }
 
 }

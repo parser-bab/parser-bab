@@ -4,18 +4,22 @@
 namespace App\Http\Controllers;
 
 
+
+use App\User;
+use Illuminate\Http\Request;
 use VK\Client\VKApiClient;
 use VK\OAuth\Scopes\VKOAuthUserScope;
 use VK\OAuth\VKOAuth;
 use VK\OAuth\VKOAuthDisplay;
 use VK\OAuth\VKOAuthResponseType;
 
-class in extends Controller
+class PersonalCabinetController extends Controller
 {
     public $codik;
 
-    public function index()
+    public function index(Request $request)
     {
+//        dd(auth()->user());
         /**
          * @var VKOAuth @oauth
          */
@@ -28,16 +32,21 @@ class in extends Controller
         $state = 'secret_state_code';
 
         $browser_url = $oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope, $state);
-        return view('getkey', compact('browser_url'));
+
+        $code = $request->input('code');
+        return view('PersonalCabinet.index', compact('browser_url','code'));
 
         //dd($browser_url);
-
     }
 
-   public function second()
+   public function second(Request $request)
    {
-       $codik = $_GET['code'];
-       return view('second', compact('codik'));
+       $code = $request->input('code');
+       $user = auth()->user();
+       $user->vk_token = $code;
+       $user->save();
+       return redirect()->route('PersonalCabinet');
+//       return view('second', compact('codik'));
    }
 
 }

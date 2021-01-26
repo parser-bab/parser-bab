@@ -22,6 +22,7 @@ class CreateGirlsTable extends Migration
             $table->string('photo');
             $table->string('group');
             $table->string('group_name');
+            $table->json('posts');
             $table->timestamps();
         });
     }

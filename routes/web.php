@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/in', 'in@index');
-Route::get('/second', 'in@second');
+Route::get('/', 'PersonalCabinetController@index')->name('PersonalCabinet');
+Route::get('/second', 'PersonalCabinetController@second');
 
-Route::get('/', function () {
-    return view('getkey');
-});
+//Route::get('/', function () {
+//    return view('home');
+//});
 
 Route::get('/api', 'ApiController@index');
 
