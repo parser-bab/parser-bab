@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PersonalCabinetController@index')->name('PersonalCabinet');
-Route::get('/second', 'PersonalCabinetController@second');
+Route::get('/second', 'PersonalCabinetController@getToken');
+Route::get('/create-task', 'PersonalCabinetController@createTask')->name('PersonalCabinetCreateTask');
+Route::post('/create-task', 'PersonalCabinetController@storeTask')->name('PersonalCabinetStoreTask');
 
 //Route::get('/', function () {
 //    return view('home');

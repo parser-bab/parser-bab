@@ -72,7 +72,7 @@ class jopa extends Command
         $redirect_uri = 'http://127.0.0.1/second';
         $code = '5342caa66761885263';
 
-        //$response = $oauth->getAccessToken($client_id, $client_secret, $redirect_uri, $code);
+        $response = $oauth->getAccessToken($client_id, $client_secret, $redirect_uri, $code);
         //$access_token = $response['access_token'];
         //dd($access_token);
 
