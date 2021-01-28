@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 
+use App\Events\TaskUpdated;
 use App\Girl;
 use App\Group;
 use App\Jobs\StartTask;
@@ -23,6 +24,8 @@ class PersonalCabinetController extends Controller
     public $codik;
     public function index(Request $request)
     {
+//        $job = new StartTask();
+//        $this->dispatch($job);
 //        dd(auth()->user());
         /**
          * @var VKOAuth @oauth
@@ -38,7 +41,8 @@ class PersonalCabinetController extends Controller
         $browser_url = $oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope, $state);
         //dd($browser_url);
         $code = $request->input('code');
-        return view('PersonalCabinet.index');
+        $task = Task::find(1);
+        return view('PersonalCabinet.index',compact('task'));
 
         //dd($browser_url);
     }
@@ -77,10 +81,11 @@ class PersonalCabinetController extends Controller
    {
 
 
-       $data = $request->input();
-       $data['vk_token'] = auth()->user()->vk_token;
-       $task = (new Task())->create($data);
-       $job = new StartTask($task);
+//       $data = $request->input();
+//       $data['vk_token'] = auth()->user()->vk_token;
+//       $task = (new Task())->create($data);
+       $task = Task::find(1);
+       $job = (new StartTask($task))->onQueue('job');
        $this->dispatch($job);
 
        return redirect()->route('PersonalCabinet');

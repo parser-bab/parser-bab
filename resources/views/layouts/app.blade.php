@@ -10,7 +10,11 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/laravel-echo-setup.js') }}" defer></script>
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -79,3 +83,29 @@
     </div>
 </body>
 </html>
+<script>
+    window.Echo.channel('longrunningtask')
+        .listen('TaskUpdated', (e) => {
+            $('.progress .progress-bar').css('width', function() {
+                console.log(e.progress);
+                return e.progress + '%';
+            })
+
+        });
+</script>
+<script>
+    let a = 1111;
+    console.log(a);
+    $('.progress .progress-bar').css('width', function() {
+        console.log(e.progress);
+        return $(this).attr('10') + '%';
+    })
+    // $(document).on('ready', function(){
+    //     $('.progress .progress-bar').css('width', function() {
+    //         return $(this).attr('aria-valuenow') + '%';
+    //     })
+    //         console.log($(this).attr('aria-valuenow') + '%');
+    // })
+</script>
+
+

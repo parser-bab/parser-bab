@@ -19,6 +19,8 @@ class CreateTasksTable extends Migration
             $table->string('title');
             $table->string('number_posts');
             $table->string('vk_token');
+            $table->string('progress')->default(0);
+            $table->string('number_girls')->default(0);
             $table->timestamps();
         });
     }

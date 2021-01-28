@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/createTask.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/assets/js/laravel-echo-setup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b551832-0e4e-45ca-baa1-9085df770cfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4b551832-0e4e-45ca-baa1-9085df770cfb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/jopa.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/jopa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Girl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Girl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_07_174054_create_girls_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_26_174951_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_26_174951_create_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +145,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="ProjectId" id="1b8H2gICxjR0WZs1uOsPPI2T90Q" />
@@ -188,7 +198,8 @@
       <workItem from="1588960090788" duration="22000" />
       <workItem from="1588962838310" duration="147000" />
       <workItem from="1611596370096" duration="3041000" />
-      <workItem from="1611667953523" duration="14716000" />
+      <workItem from="1611667953523" duration="20379000" />
+      <workItem from="1611748966262" duration="3384000" />
     </task>
     <task id="LOCAL-00001" summary="Сделан редирект и получение ключа">
       <created>1611679806868</created>
@@ -197,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611679806868</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Сделан редирект и получение ключа токена">
+      <created>1611692433936</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611692433936</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +223,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сделан редирект и получение ключа" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделан редирект и получение ключа" />
+    <MESSAGE value="Сделан редирект и получение ключа токена" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделан редирект и получение ключа токена" />
   </component>
 </project>

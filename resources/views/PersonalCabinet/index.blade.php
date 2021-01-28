@@ -7,7 +7,8 @@
     @else
         @if(!empty(auth()->user()->vk_token))
             <h3 class="text-white text-center">Действителен до [{{auth()->user()->vk_token_expires}}]</h3>
-            <h3 class="text-white text-center">Количество запросов - @if(auth()->user()->requests_number == 0) 0 @else {{auth()->user()->requests_number}} @endif</h3>
+            <h3 class="text-white text-center">Количество запросов - @if(auth()->user()->requests_number == 0)
+                    0 @else {{auth()->user()->requests_number}} @endif</h3>
         @endif
 
 
@@ -23,16 +24,21 @@
                         <thead>
                         <tr>
                             <th>Название группы</th>
-                            <th>Количество баб</th>
+                            <th>Количество постов</th>
                             <th>Процесс выполнения</th>
                         </tr>
                         </thead>
                         <tbody>
-
+                        <th></th>
+                        <th></th>
+                        <th><div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: {{$task->progress}}%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div></th>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     @endguest
+
 @endsection
