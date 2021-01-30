@@ -24,6 +24,7 @@ class PersonalCabinetController extends Controller
     public $codik;
     public function index(Request $request)
     {
+        dd(Girl::find(66)->posts()->get());
         $tasks = Task::all();
 //        $job = new StartTask();
 //        $this->dispatch($job);

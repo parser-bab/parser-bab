@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Events\TaskUpdated;
 use App\Girl;
 use App\Group;
+use App\Post;
 use App\Task;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -71,6 +72,8 @@ class StartTask implements ShouldQueue
             $data->title = $groupNameForList;
             $data->save();
         }
+
+
         //dd($data);
         /**
          * Получение списка постов
@@ -162,8 +165,7 @@ class StartTask implements ShouldQueue
                 $findUserByCity = $this->getBabs($getInfoUser, $groupId, $groupNameForList);
 
                 foreach ($findUserByCity as $finded) {
-                    $finded['post']
-                    dd($finded);
+                    $finded['post'] = 'http://vk.com/wall-'.$groupId.'_'.$postId;
                     $findedUser [] = $finded;
                 }
 
@@ -183,7 +185,8 @@ class StartTask implements ShouldQueue
             sleep(0.1);
         }
 
-        $finalResult = array_unique($findedUser, SORT_REGULAR);
+        //$finalResult = array_unique($findedUser, SORT_REGULAR);
+        $finalResult = $findedUser;
         $this->task->number_girls = count($finalResult);
         $this->task->save();
 
@@ -195,32 +198,59 @@ class StartTask implements ShouldQueue
 
             if(!(Girl::where('url', 'https://vk.com/id'.$result['id']))->first()) {
                 $girl = new Girl();
+                $girl->url = 'https://vk.com/id'.$result['id'];
+                $girl->first_name = $result['first_name'];
+                $girl->last_name = $result['last_name'];
+                if (isset($result['bdate'])) {
+                    $girl->bdate = $result['bdate'];
+                }
+                else {
+                    $girl->bdate = '---';
+                }
+                $girl->photo = $result['photo'];
+                $girl->group = $result['group'];
+                $girl->group_name = $result['group_name'];
+//            $girl->posts = toJson('aala');
+                $girl->save();
+                $girl->groups()->attach($data);
             }
             else {
                 $girl = Girl::where('url', 'https://vk.com/id'.$result['id'])->first();
+                $girl->groups()->attach($data);
+                if (!($postData = Post::where('url', $result['post']))->first()) {
+                    $postData = new Post();
+                    $postData->url = $result['post'];
+                    $postData->save();
+                    $girl->posts()->attach($postData);
+                }
+                else {
+                    $postData = Post::where('url', $result['post'])->first();
+                    $girl->posts()->attach($postData);
+                }
             }
+            dump($girl);
 
 
 
-
-            $girl = new Girl();
-            $girl->url = 'https://vk.com/id'.$result['id'];
-            $girl->first_name = $result['first_name'];
-            $girl->last_name = $result['last_name'];
-            if (isset($result['bdate'])) {
-                $girl->bdate = $result['bdate'];
-            }
-            else {
-                $girl->bdate = '---';
-            }
-            $girl->photo = $result['photo'];
-            $girl->group = $result['group'];
-            $girl->group_name = $result['group_name'];
-//            $girl->posts = toJson('aala');
-            $girl->save();
-            $girl->groups()->attach($data);
+//            $girl = new Girl();
+//            $girl->url = 'https://vk.com/id'.$result['id'];
+//            $girl->first_name = $result['first_name'];
+//            $girl->last_name = $result['last_name'];
+//            if (isset($result['bdate'])) {
+//                $girl->bdate = $result['bdate'];
+//            }
+//            else {
+//                $girl->bdate = '---';
+//            }
+//            $girl->photo = $result['photo'];
+//            $girl->group = $result['group'];
+//            $girl->group_name = $result['group_name'];
+////            $girl->posts = toJson('aala');
+//            $girl->save();
+//            $girl->groups()->attach($data);
             ++$i;
         }
+        dd();
 //        echo 'Запись успешно завершена.'.' // '.date('Y-m-d H:i:s').PHP_EOL;
 
     }

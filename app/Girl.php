@@ -10,4 +10,9 @@ class Girl extends Model
     {
         return $this->belongsToMany(Group::class);
     }
+
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class);
+    }
 }
