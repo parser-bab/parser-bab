@@ -24,7 +24,7 @@ class PersonalCabinetController extends Controller
     public $codik;
     public function index(Request $request)
     {
-        dd(Girl::find(66)->posts()->get());
+//        dd(Girl::find(5)->posts()->get());
         $tasks = Task::all();
 //        $job = new StartTask();
 //        $this->dispatch($job);
@@ -89,5 +89,6 @@ class PersonalCabinetController extends Controller
 
        return redirect()->route('PersonalCabinet');
    }
+
 
 }
