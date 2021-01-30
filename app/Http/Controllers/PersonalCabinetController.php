@@ -24,6 +24,7 @@ class PersonalCabinetController extends Controller
     public $codik;
     public function index(Request $request)
     {
+        $tasks = Task::all();
 //        $job = new StartTask();
 //        $this->dispatch($job);
 //        dd(auth()->user());
@@ -41,8 +42,8 @@ class PersonalCabinetController extends Controller
         $browser_url = $oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope, $state);
         //dd($browser_url);
         $code = $request->input('code');
-        $task = Task::find(1);
-        return view('PersonalCabinet.index',compact('task'));
+        //$task = Task::find(1);
+        return view('PersonalCabinet.index',compact('tasks'));
 
         //dd($browser_url);
     }
@@ -79,13 +80,10 @@ class PersonalCabinetController extends Controller
 
    public function storeTask (Request $request)
    {
-
-
-//       $data = $request->input();
-//       $data['vk_token'] = auth()->user()->vk_token;
-//       $task = (new Task())->create($data);
-       $task = Task::find(1);
-       $job = (new StartTask($task))->onQueue('job');
+       $data = $request->input();
+       $data['vk_token'] = auth()->user()->vk_token;
+       $task = (new Task())->create($data);
+       $job = (new StartTask($task));
        $this->dispatch($job);
 
        return redirect()->route('PersonalCabinet');

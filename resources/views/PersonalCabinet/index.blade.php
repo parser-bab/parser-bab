@@ -29,11 +29,29 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <th></th>
-                        <th></th>
-                        <th><div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: {{$task->progress}}%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div></th>
+                        @foreach($tasks as $task)
+                            <tr>
+                                <td>{{$task->title}}</td>
+                                <td>
+                                    @if (empty($task->number_girls))
+                                        В процессе
+                                    @else
+                                    {{$task->number_girls}}
+                                        @endif
+                                </td>
+                                <td>
+                                    @if ($task->progress == 100)
+                                        Завершено
+                                    @else
+                                        <div class="task-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: {{$task->progress}}%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

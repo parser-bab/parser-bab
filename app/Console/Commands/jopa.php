@@ -92,6 +92,7 @@ class jopa extends Command
         ));
         $groupNameForList = $owner[0]['name'];
 
+
         $ownerId = $owner[0]['id'];
 
         //$ownerId = 27122967;

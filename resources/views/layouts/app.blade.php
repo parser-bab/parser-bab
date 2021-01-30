@@ -90,16 +90,18 @@
                 console.log(e.progress);
                 return e.progress + '%';
             })
-
+            if (e.progress > 99.9) {
+                $('.task-progress').html('Завершено');
+            }
         });
 </script>
 <script>
     let a = 1111;
     console.log(a);
-    $('.progress .progress-bar').css('width', function() {
-        console.log(e.progress);
-        return $(this).attr('10') + '%';
-    })
+    // $('.progress .progress-bar').css('width', function() {
+    //     console.log(e.progress);
+    //     return $(this).attr('10') + '%';
+    // })
     // $(document).on('ready', function(){
     //     $('.progress .progress-bar').css('width', function() {
     //         return $(this).attr('aria-valuenow') + '%';
