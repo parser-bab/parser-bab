@@ -1,7 +1,15 @@
 <?php
 
 use Illuminate\Support\Str;
-$DATABASE_URL=parse_url("mysql://b1dfa04fbbce75:9dd63409@eu-cdbr-west-03.cleardb.net/heroku_bb2cf6c755769cd?reconnect=true");
+
+$url = parse_url(getenv("mysql://b1dfa04fbbce75:9dd63409@eu-cdbr-west-03.cleardb.net/heroku_bb2cf6c755769cd?reconnect=true"));
+
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
+
+
 return [
 
     /*
@@ -44,23 +52,15 @@ return [
         ],
 
         'mysql' => [
-            'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => $DATABASE_URL['host'],
-            'port' => 3306,
-            'database' => ltrim($DATABASE_URL['path'],'/'),
-            'username' => $DATABASE_URL['user'],
-            'password' => $DATABASE_URL['pass'],
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'strict' => true,
-            'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
+            'driver'    => 'mysql',
+            'host'      => $host,
+            'database'  => $database,
+            'username'  => $username,
+            'password'  => $password,
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+
         ],
 
         'pgsql' => [
