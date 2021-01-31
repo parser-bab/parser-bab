@@ -12,4 +12,9 @@ class Task extends Model
         'title',
         'vk_token'
     ];
+
+    public function groups()
+    {
+        return $this->belongsTo(Group::class);
+    }
 }

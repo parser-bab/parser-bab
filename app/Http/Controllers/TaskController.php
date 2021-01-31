@@ -2,30 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Girl;
+use App\Group;
+use App\Task;
 use Illuminate\Http\Request;
 
-class ListController extends Controller
+class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     *
      */
-    /**
-     * @var Girl $girlModel
-     */
-    private $girlModel;
-    public function __construct()
-    {
-        $this->girlModel = app()->make(Girl::class);
-    }
-
     public function index()
     {
-        $lists = $this->girlModel->with('posts')->get();
-        return view('list', compact('lists'));
+        //
     }
 
     /**
@@ -57,7 +47,9 @@ class ListController extends Controller
      */
     public function show($id)
     {
-        //
+        $task = Task::findOrFail($id);
+        $lists = Group::where('url_group', $task->url_group)->first()->girls()->get();
+        return view('listTask', compact('lists'));
     }
 
     /**
@@ -91,20 +83,7 @@ class ListController extends Controller
      */
     public function destroy($id)
     {
-        $girl = Girl::findOrFail($id);
-        $groups = $girl->groups()->get();
-        $posts = $girl->posts()->get();
-        $girl->groups()->detach($groups);
-        $girl->posts()->detach($posts);
-        $girl->delete();
-        return redirect(route('list.index'));
-    }
-
-    function removedata(Request $request)
-    {
-        $girl = Girl::findOrFail($request->input('id'));
-        if($girl->delete()) {
-            echo 'Date deleted';
-        }
+        Task::find($id)->delete();
+        return redirect()->route('PersonalCabinet');
     }
 }

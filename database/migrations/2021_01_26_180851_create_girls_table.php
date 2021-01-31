@@ -22,6 +22,7 @@ class CreateGirlsTable extends Migration
             $table->string('photo');
             $table->string('group');
             $table->string('group_name');
+            $table->boolean('is_pisal')->default(0);
 //            $table->json('posts');
             $table->softDeletes();
             $table->timestamps();

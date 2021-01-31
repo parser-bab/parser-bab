@@ -13,6 +13,9 @@ use App\Task;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Queue\Jobs\Job;
+use Illuminate\Queue\Queue;
+use Illuminate\Support\Facades\DB;
 use VK\Client\VKApiClient;
 use VK\OAuth\Scopes\VKOAuthUserScope;
 use VK\OAuth\VKOAuth;
@@ -24,7 +27,6 @@ class PersonalCabinetController extends Controller
     public $codik;
     public function index(Request $request)
     {
-//        dd(Girl::find(5)->posts()->get());
         $tasks = Task::all();
 //        $job = new StartTask();
 //        $this->dispatch($job);
@@ -87,6 +89,19 @@ class PersonalCabinetController extends Controller
        $job = (new StartTask($task));
        $this->dispatch($job);
 
+       return redirect()->route('PersonalCabinet');
+   }
+
+   public function logs()
+   {
+       $data = DB::table('jobs')->get();
+       return view('PersonalCabinet.logs', compact('data'));
+   }
+
+   public function clearJob()
+   {
+       DB::table('jobs')->truncate();
+       DB::table('failed_jobs')->truncate();
        return redirect()->route('PersonalCabinet');
    }
 

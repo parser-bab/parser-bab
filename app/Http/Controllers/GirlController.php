@@ -5,27 +5,16 @@ namespace App\Http\Controllers;
 use App\Girl;
 use Illuminate\Http\Request;
 
-class ListController extends Controller
+class GirlController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     *
      */
-    /**
-     * @var Girl $girlModel
-     */
-    private $girlModel;
-    public function __construct()
-    {
-        $this->girlModel = app()->make(Girl::class);
-    }
-
     public function index()
     {
-        $lists = $this->girlModel->with('posts')->get();
-        return view('list', compact('lists'));
+        //
     }
 
     /**
@@ -57,7 +46,8 @@ class ListController extends Controller
      */
     public function show($id)
     {
-        //
+        $girl = Girl::with('posts')->findOrFail($id);
+        return view('listGirl',compact('girl'));
     }
 
     /**
@@ -80,7 +70,10 @@ class ListController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $girl = Girl::find($id);
+        $girl->is_pisal = $request->input('is_pisal');
+        $girl->save();
+        return redirect()->back();
     }
 
     /**
@@ -91,20 +84,6 @@ class ListController extends Controller
      */
     public function destroy($id)
     {
-        $girl = Girl::findOrFail($id);
-        $groups = $girl->groups()->get();
-        $posts = $girl->posts()->get();
-        $girl->groups()->detach($groups);
-        $girl->posts()->detach($posts);
-        $girl->delete();
-        return redirect(route('list.index'));
-    }
-
-    function removedata(Request $request)
-    {
-        $girl = Girl::findOrFail($request->input('id'));
-        if($girl->delete()) {
-            echo 'Date deleted';
-        }
+        //
     }
 }

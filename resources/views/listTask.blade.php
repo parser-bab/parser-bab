@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 <div class="container">
@@ -11,8 +10,8 @@
             <div class="d-flex justify-content-center">
                 <a class="btn btn-primary" href="{{route('PersonalCabinet')}}">На главную</a>
             </div>
-            <div class="table-responsive">
-                <table id="mytable" class="table table-hover table-dark table-hover">
+
+                <table class="table table-hover table-dark table-hover">
                     <thead>
                     <th>№</th>
                     <th>Фото</th>
@@ -27,7 +26,7 @@
                     @foreach($lists as $list)
 
 
-                        <tr>
+                        <tr @if($list->is_pisal === 1) style="background-color: #1a3972" @endif>
                             <td class="align-middle">{{$loop->iteration}}.</td>
                             <td class="align-middle">
                                 <a href="{{$list->url}}" target="_blank">
@@ -56,7 +55,6 @@
                     @endforeach
                     </tbody>
                 </table>
-            </div>
         </div>
     </div>
 </div>
@@ -67,4 +65,5 @@
     // Прокручиваем страницу к scrollX и scrollY из localStorage (либо 0,0 если там еще ничего нет)
     window.scroll(...cords.map(cord => localStorage[cord]));
 </script>
+
 @endsection

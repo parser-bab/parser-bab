@@ -66,15 +66,15 @@ class StartTask implements ShouldQueue
         $groupId = $owner[0]['id'];
         $postsId = [];
 
-        $data = Group::where('url_group', 'http://vk.com/public'.$groupId)->first();
+        $data = Group::where('url_group', $this->task->url_group)->first();
+        dump($data);
 
         if(!$data) {
             $data = new Group();
-            $data->url_group = 'http://vk.com/public'.$groupId;
+            $data->url_group = $this->task->url_group;
             $data->title = $groupNameForList;
             $data->save();
         }
-
 
         //dd($data);
         /**
@@ -108,7 +108,7 @@ class StartTask implements ShouldQueue
             sleep(1);
         }
 
-        dd($postsId);
+        //dd($postsId);
 
         $profilesId = '';
         //$likesList = [];
@@ -176,6 +176,15 @@ class StartTask implements ShouldQueue
                 $likesList = [];
 
             }
+
+            $postData = Post::where('url', 'http://vk.com/wall-'.$groupId.'_'.$postId)->first();
+            if (!$postData) {
+                $postData = new Post();
+                $postData->url = 'http://vk.com/wall-'.$groupId.'_'.$postId;
+                $postData->save();
+            }
+
+
             ++$i;
             $likesList = [];
 
@@ -188,6 +197,7 @@ class StartTask implements ShouldQueue
             sleep(0.1);
         }
 
+
         //$finalResult = array_unique($findedUser, SORT_REGULAR);
         $finalResult = $findedUser;
         $this->task->number_girls = count($finalResult);
@@ -196,20 +206,28 @@ class StartTask implements ShouldQueue
 //        echo 'Найдено: '.count($finalResult).' пользователей.'.' // '.date('Y-m-d H:i:s').PHP_EOL;
 
 //        echo 'Началась запись в базу данных.'.' // '.date('Y-m-d H:i:s').PHP_EOL;
-        $cicles3 = 33.34/count($finalResult);
+        $cicles3 = 0;
+        if(count($finalResult) === 0) {
+            $this->task->progress = 100;
+            $this->task->save();
+            event(new TaskUpdated($this->task->progress));
+        }
+        else {
+            $cicles3 = 33.34/count($finalResult);
+        }
+
         foreach ($finalResult as $result) {
 //            echo 'Запись '.$i.'/'.count($finalResult).' // '.date('Y-m-d H:i:s').PHP_EOL;
 
             $progress += $cicles3;
-
             $this->task->progress = $progress;
             $this->task->save();
             event(new TaskUpdated($this->task->progress));
 
 
-            if(!(Girl::where('url', 'https://vk.com/id'.$result['id']))->first()) {
+            if(!(Girl::where('url', 'http://vk.com/id'.$result['id']))->first()) {
                 $girl = new Girl();
-                $girl->url = 'https://vk.com/id'.$result['id'];
+                $girl->url = 'http://vk.com/id'.$result['id'];
                 $girl->first_name = $result['first_name'];
                 $girl->last_name = $result['last_name'];
                 if (isset($result['bdate'])) {
@@ -252,7 +270,7 @@ class StartTask implements ShouldQueue
 
             }
             else {
-                $girl = Girl::where('url', 'https://vk.com/id'.$result['id'])->first();
+                $girl = Girl::where('url', 'http://vk.com/id'.$result['id'])->first();
                 $table = DB::table('girl_group')
                     ->where('girl_id',$girl->id)
                     ->where('group_id',$data->id)
@@ -300,6 +318,8 @@ class StartTask implements ShouldQueue
 //            $girl->groups()->attach($data);
             ++$i;
         }
+        $this->task->progress = 100;
+        $this->task->save();
 //        echo 'Запись успешно завершена.'.' // '.date('Y-m-d H:i:s').PHP_EOL;
 
     }

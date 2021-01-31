@@ -26,8 +26,12 @@ Route::get('/api', 'ApiController@index');
 
 
 Route::resource('/list', 'ListController');
+Route::resource('/girl', 'GirlController');
+Route::resource('/task', 'TaskController');
 Route::get('list/removedata', 'ListController@removedata')->name('list.removedata');
 
+Route::get('/logs-job','PersonalCabinetController@logs')->name('job.logs');
+Route::delete('/clear-job','PersonalCabinetController@clearJob')->name('job.clear');
 
 
 Route::resource('/apis', 'ApiEndController');

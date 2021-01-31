@@ -10,4 +10,8 @@ class Group extends Model
     {
         return $this->belongsToMany(Girl::class);
     }
+    public function tasks()
+    {
+        return $this->hasOne(Task::class);
+    }
 }
