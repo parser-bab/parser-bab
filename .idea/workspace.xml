@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/logs.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/listGirl.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/listTask.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/995976fa-82a8-4af1-aa55-adef1424a864.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/995976fa-82a8-4af1-aa55-adef1424a864.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_26_180851_create_girls_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_26_180851_create_girls_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +197,7 @@
       <workItem from="1611946210014" duration="1337000" />
       <workItem from="1611950016017" duration="3982000" />
       <workItem from="1612006638343" duration="26531000" />
-      <workItem from="1612100832329" duration="5376000" />
+      <workItem from="1612100832329" duration="6122000" />
     </task>
     <task id="LOCAL-00001" summary="Сделан редирект и получение ключа">
       <created>1611679806868</created>
@@ -247,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612030071040</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Все работает 3">
+      <created>1612110012937</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612110012937</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +265,8 @@
     <MESSAGE value="Почти фулл" />
     <MESSAGE value="Все работает" />
     <MESSAGE value="Все работает 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Все работает 2" />
+    <MESSAGE value="Все работает 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Все работает 3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
