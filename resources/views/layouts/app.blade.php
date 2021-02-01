@@ -94,14 +94,17 @@
                 $('.task-progress').html('Завершено');
             }
         });
-    window.Echo.channel('number-post')
-        .listen('TaskUpdated', (b) => {
-            $('.number-post').html('Обработано '+b.number);
-        });
+
 </script>
 <script>
     let a = 1111;
     console.log(a);
+    window.Echo.channel('number-post')
+        .listen('TaskUpdated', (b) => {
+            $('.number-post').html('Обработано '+b.number);
+            console.log(b.number);
+        });
+
     // $('.progress .progress-bar').css('width', function() {
     //     console.log(e.progress);
     //     return $(this).attr('10') + '%';

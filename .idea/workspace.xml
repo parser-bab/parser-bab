@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +196,7 @@
       <workItem from="1611950016017" duration="3982000" />
       <workItem from="1612006638343" duration="26531000" />
       <workItem from="1612100832329" duration="13417000" />
-      <workItem from="1612182002357" duration="412000" />
+      <workItem from="1612182002357" duration="743000" />
     </task>
     <task id="LOCAL-00001" summary="Сделан редирект и получение ключа">
       <created>1611679806868</created>
@@ -321,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612118954177</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Добавил счетчик">
+      <created>1612182620040</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612182620040</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +349,8 @@
     <MESSAGE value="Все работает" />
     <MESSAGE value="Все работает 2" />
     <MESSAGE value="Все работает 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Все работает 3" />
+    <MESSAGE value="Добавил счетчик" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил счетчик" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -16,21 +16,11 @@ class NumberPost implements ShouldBroadcast
 
     public $number;
 
-    /**
-     * Create a new event instance.
-     *
-     * @param $number
-     */
     public function __construct($number)
     {
         $this->number = $number;
     }
 
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return \Illuminate\Broadcasting\Channel|array
-     */
     public function broadcastOn()
     {
         return new PrivateChannel('number-post');
