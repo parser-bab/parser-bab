@@ -100,7 +100,7 @@
     let a = 1111;
     console.log(a);
     window.Echo.channel('number-post')
-        .listen('TaskUpdated', (b) => {
+        .listen('NumberPost', (b) => {
             $('.number-post').html('Обработано '+b.number);
             console.log(b.number);
         });

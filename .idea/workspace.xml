@@ -196,7 +196,7 @@
       <workItem from="1611950016017" duration="3982000" />
       <workItem from="1612006638343" duration="26531000" />
       <workItem from="1612100832329" duration="13417000" />
-      <workItem from="1612182002357" duration="743000" />
+      <workItem from="1612182002357" duration="1057000" />
     </task>
     <task id="LOCAL-00001" summary="Сделан редирект и получение ключа">
       <created>1611679806868</created>
@@ -324,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612182620040</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Добавил счетчик">
+      <created>1612182902752</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1612182902752</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
