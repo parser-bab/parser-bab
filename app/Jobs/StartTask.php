@@ -21,7 +21,7 @@ class StartTask implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public $timeout = 3000;
+    public $timeout = 8000;
     private $task;
     /**
      * Create a new job instance.
