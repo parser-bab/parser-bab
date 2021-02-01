@@ -90,6 +90,7 @@
                 console.log(e.progress);
                 return e.progress + '%';
             })
+            $('.progress-bar').html(e.progress+'%');
             if (e.progress > 99.9) {
                 $('.task-progress').html('Завершено');
             }
@@ -99,11 +100,6 @@
 <script>
     let a = 1111;
     console.log(a);
-    window.Echo.channel('number-post')
-        .listen('NumberPost', (b) => {
-            $('.number-post').html('Обработано '+b.number);
-            console.log(b.number);
-        });
 
     // $('.progress .progress-bar').css('width', function() {
     //     console.log(e.progress);
