@@ -37,13 +37,13 @@ class PersonalCabinetController extends Controller
         $oauth = new VKOAuth();
         $client_id = 7436120;
 
-        $redirect_uri = 'http://127.0.0.1/second';
+        $redirect_uri = 'http://92.38.152.201/second';
         $display = VKOAuthDisplay::PAGE;
         $scope = array(VKOAuthUserScope::WALL, VKOAuthUserScope::GROUPS);
         $state = 'secret_state_code';
 
         $browser_url = $oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope, $state);
-        //dd($browser_url);
+       // dd($browser_url);
         $code = $request->input('code');
         //$task = Task::find(1);
         return view('PersonalCabinet.index',compact('tasks'));
@@ -53,14 +53,14 @@ class PersonalCabinetController extends Controller
 
    public function getToken(Request $request)
    {
-//       dd($request->input());
+  //     dd($request->input());
        $code = $request->input('code');
 
        $client_id = 7436120;
        $client_secret = 'WpiQkAdSZvuLhHuPuHvi';
-       $redirect_uri = 'http://127.0.0.1/second';
+       $redirect_uri = 'http://92.38.152.201/second';
        $code = $request->input('code');
-
+//	dd($code);
        $oauth = new VKOAuth();
        $response = $oauth->getAccessToken($client_id, $client_secret, $redirect_uri, $code);
 
