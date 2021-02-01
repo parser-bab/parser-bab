@@ -158,7 +158,7 @@ class StartTask implements ShouldQueue
                         $profilesId .= $likeList['id'] . ',';
                 }
 
-                sleep(0.8);
+                sleep(1);
 
 
                 $getInfoUser = $vk->users()->get($access_token, array(
@@ -195,7 +195,7 @@ class StartTask implements ShouldQueue
             $this->task->save();
             event(new TaskUpdated($this->task->progress));
 
-            sleep(0.8);
+            sleep(1);
         }
 
 
