@@ -62,7 +62,7 @@
                                         <div class="task-progress">
                                             <div class="progress">
                                                 <div class="number-post"></div>
-                                                <div class="progress-bar" role="progressbar" style="width: {{$task->progress}}%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar" style="width: {{$task->progress}}%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100">50%</div>
                                             </div>
                                         </div>
                                     @endif

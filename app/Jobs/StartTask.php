@@ -123,12 +123,9 @@ class StartTask implements ShouldQueue
          * Перебор каждого поста
          * Получение списка лайкнувших пост
          */
-        $ii = 1;
         foreach ($postsId as $postId) {
 
             //echo 'Пост ' . $i . '/' . count($postsId).' // '.date('Y-m-d H:i:s').PHP_EOL;
-            event(new NumberPost($ii));
-            $ii++;
             /**
              * Получение списка лайкнувших для поста
              */
@@ -161,7 +158,7 @@ class StartTask implements ShouldQueue
                         $profilesId .= $likeList['id'] . ',';
                 }
 
-                sleep(0.4);
+                sleep(0.5);
 
 
                 $getInfoUser = $vk->users()->get($access_token, array(
@@ -198,9 +195,8 @@ class StartTask implements ShouldQueue
             $this->task->save();
             event(new TaskUpdated($this->task->progress));
 
-            sleep(0.4);
+            sleep(0.5);
         }
-        $ii = 1;
 
 
         //$finalResult = array_unique($findedUser, SORT_REGULAR);
