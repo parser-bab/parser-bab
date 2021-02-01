@@ -94,7 +94,7 @@ class PersonalCabinetController extends Controller
 
    public function logs()
    {
-       $data = DB::table('jobs')->get();
+       $data = DB::table('failed_jobs')->get();
        return view('PersonalCabinet.logs', compact('data'));
    }
 

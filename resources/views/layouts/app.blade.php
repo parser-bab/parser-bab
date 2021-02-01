@@ -94,6 +94,10 @@
                 $('.task-progress').html('Завершено');
             }
         });
+    window.Echo.channel('number-post')
+        .listen('TaskUpdated', (b) => {
+            $('.number-post').html('Обработано '+b.number);
+        });
 </script>
 <script>
     let a = 1111;

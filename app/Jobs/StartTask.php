@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Events\NumberPost;
 use App\Events\TaskUpdated;
 use App\Girl;
 use App\Group;
@@ -122,9 +123,12 @@ class StartTask implements ShouldQueue
          * Перебор каждого поста
          * Получение списка лайкнувших пост
          */
+        $ii = 1;
         foreach ($postsId as $postId) {
-            //echo 'Пост ' . $i . '/' . count($postsId).' // '.date('Y-m-d H:i:s').PHP_EOL;
 
+            //echo 'Пост ' . $i . '/' . count($postsId).' // '.date('Y-m-d H:i:s').PHP_EOL;
+            event(new NumberPost($ii));
+            $ii++;
             /**
              * Получение списка лайкнувших для поста
              */
@@ -157,7 +161,7 @@ class StartTask implements ShouldQueue
                         $profilesId .= $likeList['id'] . ',';
                 }
 
-                sleep(1);
+                sleep(0.4);
 
 
                 $getInfoUser = $vk->users()->get($access_token, array(
@@ -194,8 +198,9 @@ class StartTask implements ShouldQueue
             $this->task->save();
             event(new TaskUpdated($this->task->progress));
 
-            sleep(1);
+            sleep(0.4);
         }
+        $ii = 1;
 
 
         //$finalResult = array_unique($findedUser, SORT_REGULAR);

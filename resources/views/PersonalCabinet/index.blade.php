@@ -34,6 +34,7 @@
                             <th>Название задачи</th>
                             <th>Количество баб</th>
                             <th>Процесс выполнения</th>
+                            <th>Количество постов</th>
                             <th>Удалить</th>
                         </tr>
                         </thead>
@@ -60,10 +61,14 @@
                                     @else
                                         <div class="task-progress">
                                             <div class="progress">
+                                                <div class="number-post"></div>
                                                 <div class="progress-bar" role="progressbar" style="width: {{$task->progress}}%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     @endif
+                                </td>
+                                <td>
+                                    {{$task->number_posts}}
                                 </td>
                                 <td class="align-middle">
                                     <form style="margin: 0" method="post" action="{{route('task.destroy', $task->id)}}">

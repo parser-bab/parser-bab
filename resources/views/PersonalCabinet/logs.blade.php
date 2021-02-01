@@ -17,7 +17,7 @@
                                 {{$item->id}}
                             </td>
                             <td class="align-middle">
-                                $item->connection
+                                {{$item->connection}}
                             </td>
                             <td class="align-middle">
                                 {{$item->queue}}
