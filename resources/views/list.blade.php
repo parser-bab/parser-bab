@@ -43,7 +43,7 @@
                                 <td class="align-middle">{{$list->bdate}}</td>
                                 <td class="align-middle">
                                     @foreach($list->groups as $group)
-                                        <a href="{{$group->url_group}}">{{$group->title}}</a>
+                                        <a href="{{$group->url_group}}">| {{$group->title}} |</a>
                                     @endforeach
                                 </td>
                                 @if (auth()->user()->id == 1)
