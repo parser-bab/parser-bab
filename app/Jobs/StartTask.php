@@ -68,7 +68,7 @@ class StartTask implements ShouldQueue
         $postsId = [];
 
         $data = Group::where('url_group', $this->task->url_group)->first();
-        dump($data);
+        //dump($data);
 
         if(!$data) {
             $data = new Group();
@@ -275,7 +275,7 @@ class StartTask implements ShouldQueue
                 $table = DB::table('girl_group')
                     ->where('girl_id',$girl->id)
                     ->where('group_id',$data->id)
-                    ->get();
+                    ->first();
                 dump($data,$table);
                 if(!$table) {
                     $girl->groups()->attach($data);
