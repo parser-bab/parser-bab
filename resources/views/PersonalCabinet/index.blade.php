@@ -80,14 +80,17 @@
                                 <td>
                                     {{$task->number_posts}}
                                 </td>
-                                <td class="align-middle">
-                                    <form style="margin: 0" method="post" action="{{route('task.destroy', $task->id)}}">
-                                        @csrf
-                                        @method('delete')
-                                        <button type="submit" class="btn btn-danger btn-xs" data-title="Delete">X
-                                        </button>
-                                    </form>
-                                </td>
+                                @if (auth()->user()->id == 1)
+                                    <td class="align-middle">
+                                        <form style="margin: 0" method="post"
+                                              action="{{route('task.destroy', $task->id)}}">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-danger btn-xs" data-title="Delete">X
+                                            </button>
+                                        </form>
+                                    </td>
+                                @endif
                             </tr>
                         @endforeach
                         </tbody>
