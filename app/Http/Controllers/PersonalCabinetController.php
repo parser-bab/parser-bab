@@ -112,8 +112,32 @@ class PersonalCabinetController extends Controller
             $item = DB::table('girl_post')
                 ->where('id', $i)
                 ->first();
+
             $post = Post::find($item->post_id);
-            dd($post);
+            $girl = Girl::find($item->girl_id);
+
+            $id1 = explode('_', $post->url);
+            $id1 = $id1[0];
+            $id2 = explode('-', $id1);
+            $id = $id2[1];
+
+//            $group = DB::table('groups')
+//                ->where('url_group', '=', 'https://vk.com/public'.$id)
+//                ->first();
+
+            $group = Group::where('url_group', '=', 'https://vk.com/public'.$id)->first();
+
+            $relation = DB::table('girl_group')
+                ->where('group_id', $group->id)
+                ->where('girl_id', $girl->id)
+                ->first();
+            dump($item, $post, $girl, $id, $group, $relation);
+            dd();
+            if (!$relation) {
+                $girl->groups()->attach($group);
+            }
+
+            dd($group);
        }
 
     }
