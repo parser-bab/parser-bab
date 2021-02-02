@@ -49,7 +49,7 @@ class TaskController extends Controller
     {
         $task = Task::findOrFail($id);
         $lists = Group::where('url_group', $task->url_group)->first()->girls()->with('groups')->get();
-        dd($lists[1]->groups);
+        dd($lists->groups);
         return view('listTask', compact('lists'));
     }
 
