@@ -280,8 +280,9 @@ class StartTask implements ShouldQueue
                 if(!$table) {
                     $girl->groups()->attach($data);
                     dump('glushka');
-                    dd();
+
                 }
+                dd();
                 $postData = Post::where('url', $result['post'])->first();
                 if (!$postData) {
                     $postData = new Post();
