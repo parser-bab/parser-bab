@@ -225,7 +225,7 @@ class StartTask implements ShouldQueue
             $this->task->save();
             event(new TaskUpdated($this->task->progress));
 
-
+            dd(!(Girl::where('url', 'http://vk.com/id'.$result['id']))->first());
             if(!(Girl::where('url', 'http://vk.com/id'.$result['id']))->first()) {
                 $girl = new Girl();
                 $girl->url = 'http://vk.com/id'.$result['id'];
