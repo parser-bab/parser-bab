@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/listTask.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listTask.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +199,7 @@
       <workItem from="1612006638343" duration="26531000" />
       <workItem from="1612100832329" duration="13417000" />
       <workItem from="1612182002357" duration="2300000" />
-      <workItem from="1612281294423" duration="383000" />
+      <workItem from="1612281294423" duration="1062000" />
     </task>
     <task id="LOCAL-00001" summary="Сделан редирект и получение ключа">
       <created>1611679806868</created>
@@ -378,7 +376,35 @@
       <option name="project" value="LOCAL" />
       <updated>1612281373483</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Добавил счетчик">
+      <created>1612281681800</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1612281681800</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Добавил счетчик">
+      <created>1612281762233</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1612281762233</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Добавил счетчик">
+      <created>1612281889666</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612281889666</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Добавил счетчик">
+      <created>1612281966239</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1612281966239</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

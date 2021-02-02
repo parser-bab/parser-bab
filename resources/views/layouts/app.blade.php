@@ -94,7 +94,7 @@
         .listen('TaskUpdated', (e) => {
             $('.progress .progress-bar').css('width', function () {
                 console.log(e.progress);
-                return e.progress + '%';
+                return (e.progress.toFixed(2)) + '%';
             })
             $('.progress-bar2').html(e.progress + '%');
             if (e.progress > 99.9) {
