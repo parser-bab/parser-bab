@@ -125,9 +125,7 @@ class PersonalCabinetController extends Controller
 //                ->where('url_group', '=', 'https://vk.com/public'.$id)
 //                ->first();
 
-            $group = Group::where('url_group', '=', 'https://vk.com/public'.$id)->first();
-            dump($id);
-            dd($group);
+            $group = Group::where('url_group', '=', 'https://vk.com/club'.$id)->first();
             $relation = DB::table('girl_group')
                 ->where('group_id', $group->id)
                 ->where('girl_id', $girl->id)
