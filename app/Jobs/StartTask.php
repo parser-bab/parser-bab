@@ -338,7 +338,7 @@ class StartTask implements ShouldQueue
             }
             //650
             //2256
-            if ($infoUser['sex'] == 1 and $infoUser['city']['id'] == 650) {
+            if ($infoUser['sex'] == 2 and $infoUser['city']['id'] == 650) {
                 if (isset($infoUser['bdate'])) {
                     $end [] = [
                         'id' => $infoUser['id'],

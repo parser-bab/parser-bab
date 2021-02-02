@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +201,8 @@
       <workItem from="1612006638343" duration="26531000" />
       <workItem from="1612100832329" duration="13417000" />
       <workItem from="1612182002357" duration="2300000" />
-      <workItem from="1612281294423" duration="1062000" />
+      <workItem from="1612281294423" duration="1805000" />
+      <workItem from="1612298979046" duration="166000" />
     </task>
     <task id="LOCAL-00001" summary="Сделан редирект и получение ключа">
       <created>1611679806868</created>
@@ -404,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612281966239</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Добавил счетчик">
+      <created>1612282398064</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612282398064</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Добавил счетчик">
+      <created>1612282497908</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1612282497908</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
