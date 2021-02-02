@@ -96,7 +96,7 @@
                 console.log(e.progress);
                 return (e.progress.toFixed(2)) + '%';
             })
-            $('.progress-bar2').html(e.progress + '%');
+            $('.progress-bar2').html((e.progress.toFixed(2)) + '%');
             if (e.progress > 99.9) {
                 $('.task-progress').html('Завершено');
             }
