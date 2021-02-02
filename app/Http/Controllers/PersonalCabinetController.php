@@ -8,6 +8,7 @@ use App\Events\TaskUpdated;
 use App\Girl;
 use App\Group;
 use App\Jobs\StartTask;
+use App\Post;
 use App\Task;
 use App\User;
 use Carbon\Carbon;
