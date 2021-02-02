@@ -128,15 +128,13 @@ class PersonalCabinetController extends Controller
             $group = Group::where('url_group', '=', 'https://vk.com/club'.$id)->first();
             $relation = DB::table('girl_group')
                 ->where('group_id', $group->id)
-                ->where('girl_id', 8000)
+                ->where('girl_id', $girl->id)
                 ->first();
-            dump($item, $post, $girl, $id, $group, $relation);
-            dd();
+//            dump($item, $post, $girl, $id, $group, $relation);
+//            dd();
             if (!$relation) {
                 $girl->groups()->attach($group);
             }
-
-            dd($group);
        }
 
     }
