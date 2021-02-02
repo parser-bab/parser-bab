@@ -4,7 +4,6 @@
 namespace App\Http\Controllers;
 
 
-
 use App\Events\TaskUpdated;
 use App\Girl;
 use App\Group;
@@ -25,6 +24,7 @@ use VK\OAuth\VKOAuthResponseType;
 class PersonalCabinetController extends Controller
 {
     public $codik;
+
     public function index(Request $request)
     {
         $tasks = Task::all();
@@ -43,67 +43,79 @@ class PersonalCabinetController extends Controller
         $state = 'secret_state_code';
 
         $browser_url = $oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope, $state);
-       // dd($browser_url);
+        // dd($browser_url);
         $code = $request->input('code');
         //$task = Task::find(1);
-        return view('PersonalCabinet.index',compact('tasks'));
+        return view('PersonalCabinet.index', compact('tasks'));
 
         //dd($browser_url);
     }
 
-   public function getToken(Request $request)
-   {
-  //     dd($request->input());
-       $code = $request->input('code');
+    public function getToken(Request $request)
+    {
+        //     dd($request->input());
+        $code = $request->input('code');
 
-       $client_id = 7436120;
-       $client_secret = 'WpiQkAdSZvuLhHuPuHvi';
-       $redirect_uri = 'http://92.38.152.201/second';
-       $code = $request->input('code');
+        $client_id = 7436120;
+        $client_secret = 'WpiQkAdSZvuLhHuPuHvi';
+        $redirect_uri = 'http://92.38.152.201/second';
+        $code = $request->input('code');
 //	dd($code);
-       $oauth = new VKOAuth();
-       $response = $oauth->getAccessToken($client_id, $client_secret, $redirect_uri, $code);
+        $oauth = new VKOAuth();
+        $response = $oauth->getAccessToken($client_id, $client_secret, $redirect_uri, $code);
 
-       $user = auth()->user();
-       $user->vk_token = $response['access_token'];
-       $user->vk_token_expires = Carbon::now()->addDay(1)->addHour(2);
-       $user->save();
-       return redirect()->route('PersonalCabinet');
+        $user = auth()->user();
+        $user->vk_token = $response['access_token'];
+        $user->vk_token_expires = Carbon::now()->addDay(1)->addHour(2);
+        $user->save();
+        return redirect()->route('PersonalCabinet');
 //       return view('second', compact('codik'));
-   }
+    }
 
-   public function createTask()
-   {
+    public function createTask()
+    {
 //       $girls = Girl::query()->find([1,2]);
 //       $group = Group::query()->find(1);
 //       $group->girls()->attach($girls);
 //       dd($group->girls()->get());
-       return view('PersonalCabinet.createTask');
-   }
+        return view('PersonalCabinet.createTask');
+    }
 
-   public function storeTask (Request $request)
-   {
-       $data = $request->input();
-       $data['vk_token'] = auth()->user()->vk_token;
-       $task = (new Task())->create($data);
-       $job = (new StartTask($task));
-       $this->dispatch($job);
+    public function storeTask(Request $request)
+    {
+        $data = $request->input();
+        $data['vk_token'] = auth()->user()->vk_token;
+        $task = (new Task())->create($data);
+        $job = (new StartTask($task));
+        $this->dispatch($job);
 
-       return redirect()->route('PersonalCabinet');
-   }
+        return redirect()->route('PersonalCabinet');
+    }
 
-   public function logs()
-   {
-       $data = DB::table('failed_jobs')->get();
-       return view('PersonalCabinet.logs', compact('data'));
-   }
+    public function logs()
+    {
+        $data = DB::table('failed_jobs')->get();
+        return view('PersonalCabinet.logs', compact('data'));
+    }
 
-   public function clearJob()
-   {
-       DB::table('jobs')->truncate();
-       DB::table('failed_jobs')->truncate();
-       return redirect()->route('PersonalCabinet');
-   }
+    public function clearJob()
+    {
+        DB::table('jobs')->truncate();
+        DB::table('failed_jobs')->truncate();
+        return redirect()->route('PersonalCabinet');
+    }
+
+    public function fix()
+    {
+        for ($i = 1; $i <= 1767; ++$i) {
+            $item = DB::table('girl_post')
+                ->where('id', $i)
+                ->get();
+            $post = Post::find($item->post_id);
+            dd($post);
+       }
+
+    }
 
 
 }

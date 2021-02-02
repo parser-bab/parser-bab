@@ -39,3 +39,5 @@ Route::resource('/apis', 'ApiEndController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get ('/pizdec', 'PersonalCabinetController@fix');
