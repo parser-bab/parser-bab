@@ -24,7 +24,7 @@ class ListController extends Controller
 
     public function index()
     {
-        $lists = $this->girlModel->with('posts')->get();
+        $lists = $this->girlModel->with('posts', 'groups')->get();
         return view('list', compact('lists'));
     }
 

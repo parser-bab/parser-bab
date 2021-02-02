@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/listTask.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listTask.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +201,7 @@
       <workItem from="1612100832329" duration="13417000" />
       <workItem from="1612182002357" duration="2300000" />
       <workItem from="1612281294423" duration="1805000" />
-      <workItem from="1612298979046" duration="1547000" />
+      <workItem from="1612298979046" duration="1881000" />
     </task>
     <task id="LOCAL-00001" summary="Сделан редирект и получение ключа">
       <created>1611679806868</created>
@@ -482,7 +483,42 @@
       <option name="project" value="LOCAL" />
       <updated>1612300260537</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Проверка на запись группы">
+      <created>1612300630091</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1612300630091</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Проверка на запись группы">
+      <created>1612300662096</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1612300662096</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Проверка на запись группы">
+      <created>1612300717352</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1612300717352</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Проверка на запись группы">
+      <created>1612300766249</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1612300766249</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Проверка на запись группы">
+      <created>1612300792533</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1612300792533</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -40,8 +40,9 @@
                             <td class="align-middle">{{$list->last_name}}</td>
                             <td class="align-middle">{{$list->bdate}}</td>
                             <td class="align-middle">
-                                <a href="{{$list->group}}">{{$list->group_name}}</a>
-                                <a href="{{$list->group}}">{{$list->group_name}}</a>
+                                @foreach($list->groups as $group)
+                                    <a href="{{$group->url_group}}">{{$group->title}}</a>
+                                @endforeach
                             </td>
                             @if (auth()->user()->id == 1)
                                 <td class="align-middle">
