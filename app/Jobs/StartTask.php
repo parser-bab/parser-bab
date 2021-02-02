@@ -224,8 +224,8 @@ class StartTask implements ShouldQueue
             $this->task->progress = $progress;
             $this->task->save();
             event(new TaskUpdated($this->task->progress));
-            dump ('AYYYY PIZDEEEEEEEEEEEC');
-            dd(!(Girl::where('url', 'http://vk.com/id'.$result['id']))->first());
+
+            //dd(!(Girl::where('url', 'http://vk.com/id'.$result['id']))->first());
             if(!(Girl::where('url', 'http://vk.com/id'.$result['id']))->first()) {
                 $girl = new Girl();
                 $girl->url = 'http://vk.com/id'.$result['id'];
@@ -279,7 +279,7 @@ class StartTask implements ShouldQueue
                 dump($data,$table);
                 if(!$table) {
                     $girl->groups()->attach($data);
-                    dump('glushka');
+                    dump ('AYYYY PIZDEEEEEEEEEEEC2');
 
                 }
                 dd();
