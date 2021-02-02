@@ -112,6 +112,7 @@ class PersonalCabinetController extends Controller
             $item = DB::table('girl_post')
                 ->where('id', $i)
                 ->get();
+            dd($item);
             $post = Post::find($item->post_id);
             dd($post);
        }
