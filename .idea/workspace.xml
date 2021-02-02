@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="" />
+    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +200,7 @@
       <workItem from="1612100832329" duration="13417000" />
       <workItem from="1612182002357" duration="2300000" />
       <workItem from="1612281294423" duration="1805000" />
-      <workItem from="1612298979046" duration="469000" />
+      <workItem from="1612298979046" duration="826000" />
     </task>
     <task id="LOCAL-00001" summary="Сделан редирект и получение ключа">
       <created>1611679806868</created>
@@ -424,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612299373549</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Проверка на запись группы">
+      <created>1612299528173</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1612299528173</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
