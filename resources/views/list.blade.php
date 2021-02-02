@@ -20,14 +20,16 @@
                     <th>Фамилия</th>
                     <th>Дата</th>
                     <th>Группа</th>
+                    @if (auth()->user()->id == 1)
                     <th>Посты</th>
                     <th>Удалить</th>
+                    @endif
                     </thead>
                     <tbody class="">
                     @foreach($lists as $list)
 
 
-                        <tr>
+                        <tr @if($list->is_pisal === 1) style="background-color: #1a3972" @endif>
                             <td class="align-middle">{{$loop->iteration}}.</td>
                             <td class="align-middle">
                                 <a href="{{$list->url}}" target="_blank">

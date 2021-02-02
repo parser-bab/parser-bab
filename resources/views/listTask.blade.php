@@ -19,8 +19,10 @@
                     <th>Фамилия</th>
                     <th>Дата</th>
                     <th>Группа</th>
+                    @if (auth()->user()->id == 1)
                     <th>Посты</th>
                     <th>Удалить</th>
+                    @endif
                     </thead>
                     <tbody class="">
                     @foreach($lists as $list)
@@ -40,6 +42,7 @@
                             <td class="align-middle">
                                 <a href="{{$list->group}}">{{$list->group_name}}</a>
                             </td>
+                            @if (auth()->user()->id == 1)
                             <td class="align-middle">
                                 <a href="{{route('girl.show', $list->id)}}">Список постов</a>
                             </td>
@@ -50,6 +53,7 @@
                                     <button type="submit" class="btn btn-danger btn-xs" data-title="Delete">X</button>
                                 </form>
                             </td>
+                            @endif
 
                         </tr>
                     @endforeach
