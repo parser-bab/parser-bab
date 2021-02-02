@@ -41,6 +41,7 @@
                             <td class="align-middle">{{$list->bdate}}</td>
                             <td class="align-middle">
                                 <a href="{{$list->group}}">{{$list->group_name}}</a>
+                                <a href="{{$list->group}}">{{$list->group_name}}</a>
                             </td>
                             @if (auth()->user()->id == 1)
                                 <td class="align-middle">
