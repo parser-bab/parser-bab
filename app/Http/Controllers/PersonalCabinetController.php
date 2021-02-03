@@ -138,7 +138,7 @@ class PersonalCabinetController extends Controller
 //       }
         $group = Group::find(11);
         $girls = $group->girls()->get();
-        dd($group,$girls);
+        $group->girls()->detach($girls);
 
     }
 
