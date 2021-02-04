@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
+    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен редирект">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/listGirl.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listGirl.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,14 +207,7 @@
       <workItem from="1612298979046" duration="6664000" />
       <workItem from="1612361057781" duration="2338000" />
       <workItem from="1612386773503" duration="602000" />
-      <workItem from="1612438650318" duration="4298000" />
-    </task>
-    <task id="LOCAL-00016" summary="Все работает 3">
-      <created>1612118456936</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1612118456936</updated>
+      <workItem from="1612438650318" duration="4942000" />
     </task>
     <task id="LOCAL-00017" summary="Все работает 3">
       <created>1612118954177</created>
@@ -553,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612442199519</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Добавлен редирект">
+      <created>1612443153687</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1612443153687</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +581,8 @@
     <MESSAGE value="Проверка на запись группы" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php" />
     <MESSAGE value="Увеличен шрифт, добавлена сортировка" />
-    <option name="LAST_COMMIT_MESSAGE" value="Увеличен шрифт, добавлена сортировка" />
+    <MESSAGE value="Добавлен редирект" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен редирект" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
