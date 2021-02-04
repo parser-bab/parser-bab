@@ -50,21 +50,21 @@
                             <tr>
                                 <td>
                                     @if($task->progress == 100)
-                                        <a href="{{route('task.show', $task->id)}}">{{$task->title}}</a>
+                                        <h4><a href="{{route('task.show', $task->id)}}">{{$task->title}}</a></h4>
                                     @else
-                                        {{$task->title}}
+                                        <h4>{{$task->title}}</h4>
                                     @endif
                                 </td>
                                 <td>
                                     @if (empty($task->number_girls))
-                                        В процессе
+                                        <h4>В процессе</h4>
                                     @else
-                                        {{$task->number_girls}}
+                                        <h4>{{$task->number_girls}}</h4>
                                     @endif
                                 </td>
                                 <td>
                                     @if ($task->progress == 100)
-                                        Завершено
+                                        <h4>Завершено</h4>
                                     @else
                                         <div class="task-progress">
                                             <div style="height: 60px;" class="progress">
@@ -78,7 +78,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    {{$task->number_posts}}
+                                    <h4>{{$task->number_posts}}</h4>
                                 </td>
                                 @if (auth()->user()->id == 1)
                                     <td class="align-middle">

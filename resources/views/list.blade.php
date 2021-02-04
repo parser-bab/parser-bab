@@ -5,8 +5,8 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <div class="container">
-        <div class="row">
+    <div class="container1">
+        <div class="row1">
             <div class="col-md-12">
                 <div class="d-flex justify-content-center">
                     <a class="btn btn-primary" href="{{route('PersonalCabinet')}}">На главную</a>
@@ -30,25 +30,25 @@
 
 
                             <tr @if($list->is_pisal === 1) style="background-color: #1a3972" @endif>
-                                <td class="align-middle">{{$loop->iteration}}.</td>
+                                <td class="align-middle"><h3>{{$loop->iteration}}.</h3></td>
                                 <td class="align-middle">
                                     <a href="{{$list->url}}" target="_blank">
-                                        <img src="{{$list->photo}}" class="img-fluid rounded-circle" width="80"
-                                             height="80">
+                                        <img src="{{$list->photo}}" class="rounded-circle" width="200"
+                                             height="200">
                                     </a>
 
                                 </td>
-                                <td class="align-middle">{{$list->first_name}}</td>
-                                <td class="align-middle">{{$list->last_name}}</td>
-                                <td class="align-middle">{{$list->bdate}}</td>
+                                <td class="align-middle"><h3>{{$list->first_name}}</h3></td>
+                                <td class="align-middle"><h3>{{$list->last_name}}</h3></td>
+                                <td class="align-middle"><h3>{{$list->bdate}}</h3></td>
                                 <td class="align-middle">
                                     @foreach($list->groups as $group)
-                                        <a href="{{$group->url_group}}">| {{$group->title}} |</a>
+                                        <h3><a href="{{$group->url_group}}">| {{$group->title}} |</a></h3>
                                     @endforeach
                                 </td>
                                 @if (auth()->user()->id == 1)
                                     <td class="align-middle">
-                                        <a href="{{route('girl.show', $list->id)}}">Список постов</a>
+                                        <h3><a href="{{route('girl.show', $list->id)}}">Список постов</a></h3>
                                     </td>
 
                                     <td class="align-middle">
