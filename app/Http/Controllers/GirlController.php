@@ -44,10 +44,11 @@ class GirlController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $girl = Girl::with('posts')->findOrFail($id);
-        return view('listGirl',compact('girl'));
+        $referer = $request->headers->get('referer');
+        return view('listGirl',compact('girl','referer'));
     }
 
     /**
@@ -73,7 +74,7 @@ class GirlController extends Controller
         $girl = Girl::find($id);
         $girl->is_pisal = $request->input('is_pisal');
         $girl->save();
-        return redirect()->back();
+        return redirect()->to($request->input('referer'));
     }
 
     /**

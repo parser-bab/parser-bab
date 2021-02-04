@@ -50,6 +50,10 @@
                                        checked="checked"
                                         @endif
                                 >
+                                <input name="referer"
+                                       type="hidden"
+                                       value="{{$referer}}"
+                                       >
                                 <label class="form-check-label" for="is_published">Писал</label>
                             </div>
                         </td>
