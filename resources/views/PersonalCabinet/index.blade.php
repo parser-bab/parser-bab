@@ -69,10 +69,10 @@
                                         <div class="task-progress">
                                             <div style="height: 60px;" class="progress">
                                                 <div class="number-post"></div>
-                                                <div class="progress-bar" role="progressbar"
+                                                <div class="progress-bar " role="progressbar"
                                                      style="width: {{$task->progress}}%" aria-valuenow="47"
                                                      aria-valuemin="0" aria-valuemax="100"><h3
-                                                        class="progress-bar2">{{$task->progress}}</h3></div>
+                                                        class="text-body progress-bar2">{{$task->progress}}</h3></div>
                                             </div>
                                         </div>
                                     @endif
