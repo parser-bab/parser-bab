@@ -87,11 +87,13 @@ class StartTask implements ShouldQueue
         $counter = $numberPosts;
 
         for ($offset = 0; $offset < $counter; $offset = $offset + 100) {
+
             $findAllPosts = $vk->wall()->get($access_token, array(
                 'owner_id' => '-' . $groupId,
                 'offset' => $offset,
                 'count' => $numberPosts
             ));
+            $first_time = microtime(true);
             echo 'Получение постов '.($offset+100).' // '.date('Y-m-d H:i:s').PHP_EOL;
             $postsList = $findAllPosts['items'];
             foreach ($postsList as $post) {
@@ -106,8 +108,17 @@ class StartTask implements ShouldQueue
             $this->task->progress = $progress;
             $this->task->save();
             event(new TaskUpdated($this->task->progress));
-            sleep(1);
+            $last_time = microtime(true);
+            //dd($last_time - $first_time);
+            $raznica = $last_time - $first_time;
+            if($raznica >= 0.34) {
+                continue;
+            }
+            else {
+                usleep(340000 - $raznica);
+            }
         }
+
 
         //dd($postsId);
 
@@ -130,6 +141,7 @@ class StartTask implements ShouldQueue
              * Получение списка лайкнувших для поста
              */
             for ($offset = 0; $offset < 30000; $offset = $offset + 1000) {
+                $first_time = microtime(true);
                 $findAllLikes = $vk->likes()->getList($access_token, array(
                     'type' => 'post',
                     'owner_id' => '-' . $groupId,
@@ -140,9 +152,6 @@ class StartTask implements ShouldQueue
                     'offset' => $offset
                 ));
 
-                if (count($findAllLikes['items']) == 0) {
-                    break;
-                }
 
                 //Список лайкнувших
                 $likesList = $findAllLikes['items'];
@@ -158,13 +167,30 @@ class StartTask implements ShouldQueue
                         $profilesId .= $likeList['id'] . ',';
                 }
 
-                sleep(1);
+                //sleep(1);
 
+
+
+                $last_time = microtime(true);
+                $raznica = $last_time - $first_time;
+                if($raznica < 0.34) {
+                    usleep(340000 - $raznica);
+                }
+
+                if (count($findAllLikes['items']) == 0) {
+                    break;
+                }
+
+
+
+                $first_time = microtime(true);
 
                 $getInfoUser = $vk->users()->get($access_token, array(
                     'user_ids' => $profilesId,
                     'fields' => 'photo_200,city,sex,bdate'
                 ));
+
+
 
                 $findUserByCity = $this->getBabs($getInfoUser, $groupId, $groupNameForList);
 
@@ -175,6 +201,12 @@ class StartTask implements ShouldQueue
 
                 $profilesId = '';
                 $likesList = [];
+
+                $last_time = microtime(true);
+                $raznica = $last_time - $first_time;
+                if($raznica < 0.34) {
+                    usleep(340000 - $raznica);
+                }
 
             }
 
@@ -195,7 +227,7 @@ class StartTask implements ShouldQueue
             $this->task->save();
             event(new TaskUpdated($this->task->progress));
 
-            sleep(1);
+            //sleep(1);
         }
 
 
