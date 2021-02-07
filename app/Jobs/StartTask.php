@@ -57,6 +57,7 @@ class StartTask implements ShouldQueue
         $numberPosts = $this->task->number_posts;
 
         $application->count += $numberPosts;
+        $application->worked = 1;
         $application->save();
 
         /**
@@ -359,6 +360,8 @@ class StartTask implements ShouldQueue
         }
         $this->task->progress = 100;
         $this->task->save();
+        $application->worked = 0;
+        $application->save();
 //        echo 'Запись успешно завершена.'.' // '.date('Y-m-d H:i:s').PHP_EOL;
 
     }
