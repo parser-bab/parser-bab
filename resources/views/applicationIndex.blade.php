@@ -10,7 +10,6 @@
                     <a class="btn btn-primary" href="{{route('PersonalCabinet')}}">На главную</a>
                     <form method="post" action="{{route('ApplicationResetCount')}}">
                         @csrf
-                        @method('patch')
                         <button type="submit" class="btn btn-danger btn-xs" data-title="Delete">Сбросить счетчик
                         </button>
                     </form>
