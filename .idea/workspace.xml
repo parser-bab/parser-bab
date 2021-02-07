@@ -6,14 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5c82c109-3ac1-49e6-a9a5-a14df5ff6c93.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5c82c109-3ac1-49e6-a9a5-a14df5ff6c93.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/TaskUpdated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/TaskUpdated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApplicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApplicationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/createTask.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/createTask.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -213,21 +214,7 @@
       <workItem from="1612361057781" duration="2338000" />
       <workItem from="1612386773503" duration="602000" />
       <workItem from="1612438650318" duration="6013000" />
-      <workItem from="1612701816670" duration="4960000" />
-    </task>
-    <task id="LOCAL-00020" summary="Добавил счетчик">
-      <created>1612183118401</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1612183118401</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Добавил счетчик">
-      <created>1612183439106</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1612183439106</updated>
+      <workItem from="1612701816670" duration="11744000" />
     </task>
     <task id="LOCAL-00022" summary="Добавил счетчик">
       <created>1612183615637</created>
@@ -558,7 +545,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612704579460</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Добавлен индикатор">
+      <created>1612707331640</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1612707331640</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Добавлено отображение для каждой задачи">
+      <created>1612707402164</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1612707402165</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +592,9 @@
     <MESSAGE value="Добавлена сортировка по имени" />
     <MESSAGE value="Добавлено создание приложений и выбор" />
     <MESSAGE value="Добавлен индикатор работы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен индикатор работы" />
+    <MESSAGE value="Добавлен индикатор" />
+    <MESSAGE value="Добавлено отображение для каждой задачи" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено отображение для каждой задачи" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

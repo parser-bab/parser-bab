@@ -124,7 +124,11 @@ class ApplicationController extends Controller
         $application->vk_token_expires = Carbon::now()->addDay(1)->addHour(2);
         $application->save();
 
+
         $need->delete();
+        $user = auth()->user()->vk_token = $response['access_token'];
+        $user->save();
+
         return redirect()->route('application.index');
     }
 }

@@ -12,11 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/setpisal', 'GirlController@setPisal');
+
 
 Route::get('/', 'PersonalCabinetController@index')->name('PersonalCabinet');
 
 Route::get('/create-task', 'PersonalCabinetController@createTask')->name('PersonalCabinetCreateTask');
 Route::post('/create-task', 'PersonalCabinetController@storeTask')->name('PersonalCabinetStoreTask');
+Route::post('/check-task', 'PersonalCabinetController@checkTask');
+
 
 Route::resource('/application', 'ApplicationController');
 Route::get('/application/{application}', 'ApplicationController@writeId')->name('ApplicationWriteId');

@@ -21,6 +21,7 @@
                         <th>Дата</th>
                         <th>Группа</th>
                         @if (auth()->user()->id == 1)
+                            <th>Писал</th>
                             <th>Посты</th>
                             <th>Удалить</th>
                         @endif
@@ -29,7 +30,7 @@
                         @foreach($lists as $list)
 
 
-                            <tr @if($list->is_pisal === 1) style="background-color: #1a3972" @endif>
+                            <tr id="girl-{{$list->id}}" @if($list->is_pisal === 1) style="background-color: #1a3972" @endif>
                                 <td class="align-middle"><h3>{{$loop->iteration}}.</h3></td>
                                 <td class="align-middle">
                                     <a href="{{$list->url}}" target="_blank">
@@ -45,6 +46,24 @@
                                     @foreach($list->groups as $group)
                                         <h3><a href="{{$group->url_group}}">| {{$group->title}} |</a></h3>
                                     @endforeach
+                                </td>
+                                <td class="align-middle">
+                                    <div class="form-check">
+{{--                                        <input name="is_pisal"--}}
+{{--                                               type="hidden"--}}
+{{--                                               value="{{['0' => $list->id]}}">--}}
+                                        <input style="position: absolute; clip: rect(0,0,0,0); pointer-events: none"
+                                               name="is_pisal"
+                                               type="checkbox"
+                                               class="btn-check"
+                                               id="{{$list->id}}" autocomplete="off"
+                                               value="{{$list->id}}"
+                                               @if($list->is_pisal)
+                                               checked="checked"
+                                            @endif
+                                        >
+                                        <label class="btn btn-outline-primary" for="{{$list->id}}">Писал</label>
+                                    </div>
                                 </td>
                                 @if (auth()->user()->id == 1)
                                     <td class="align-middle">
@@ -75,5 +94,36 @@
         window.addEventListener('unload', e => cords.forEach(cord => localStorage[cord] = window[cord]));
         // Прокручиваем страницу к scrollX и scrollY из localStorage (либо 0,0 если там еще ничего нет)
         window.scroll(...cords.map(cord => localStorage[cord]));
+    </script>
+    <script>
+        $(function() {
+            $('.btn-check').change(function() {
+                if($(this).is(":checked")) {
+                    let id = $(this).val()
+                    axios.post('/setpisal', {
+                        id: id,
+                        is_pisal: 1,
+                    }).then((response) => {
+                        console.log(id)
+                        console.log(response.data)
+                        $('#girl-'+(id)).css('background-color', function () {
+                            return '#1a3972';
+                        })
+                    })
+                } else {
+                    let id = $(this).val()
+                    axios.post('/setpisal', {
+                        id: id,
+                        is_pisal: 0,
+                    }).then((response) => {
+                        console.log(id)
+                        console.log(response.data)
+                        $('#girl-'+(id)).css('background-color', function () {
+                            return '';
+                        })
+                    })
+                }
+            })
+        })
     </script>
 @endsection

@@ -87,4 +87,11 @@ class GirlController extends Controller
     {
         //
     }
+
+    public function setPisal(Request $request) {
+        $girl = Girl::find($request->input('id'));
+        $girl->is_pisal = $request->input('is_pisal');
+        $girl->save();
+        return response()->json($girl,200);
+    }
 }

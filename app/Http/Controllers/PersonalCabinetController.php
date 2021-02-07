@@ -57,7 +57,6 @@ class PersonalCabinetController extends Controller
 
     public function getToken(Request $request)
     {
-        dd($request);
         //     dd($request->input());
         $code = $request->input('code');
 
@@ -91,6 +90,18 @@ class PersonalCabinetController extends Controller
     {
         //dd($request->input());
         $data = $request->input();
+
+        $group = $data['url_group'];
+        $removeChar = ["https://", "http://", "/", 'vk.com'];
+        $groupName = str_replace($removeChar, "", $group);
+
+        $vk = new VKApiClient();
+        $owner = $vk->groups()->getById(auth()->user()->vk_token, array(
+            'group_ids' => $groupName
+        ));
+
+        $data['title'] = $owner[0]['name'];
+
         //$data['vk_token'] = auth()->user()->vk_token;
         $task = (new Task())->create($data);
         $job = (new StartTask($task));
@@ -110,6 +121,22 @@ class PersonalCabinetController extends Controller
         DB::table('jobs')->truncate();
         DB::table('failed_jobs')->truncate();
         return redirect()->route('PersonalCabinet');
+    }
+
+    public function checkTask(Request $request)
+    {
+        $group = $request->input('url');
+        $removeChar = ["https://", "http://", "/", 'vk.com'];
+        $groupName = str_replace($removeChar, "", $group);
+
+        $vk = new VKApiClient();
+        $owner = $vk->groups()->getById(auth()->user()->vk_token, array(
+            'group_ids' => $groupName
+        ));
+
+        $name = $owner[0]['name'];
+        $task = Task::where('title', $name)->get();
+        return response()->json($task, 200);
     }
 
     public function fix()
@@ -147,8 +174,6 @@ class PersonalCabinetController extends Controller
         $group->girls()->detach($girls);
 
     }
-
-
 
 
 }
