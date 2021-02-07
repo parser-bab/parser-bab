@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5c82c109-3ac1-49e6-a9a5-a14df5ff6c93.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5c82c109-3ac1-49e6-a9a5-a14df5ff6c93/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,13 +208,7 @@
       <workItem from="1612438650318" duration="6013000" />
       <workItem from="1612701816670" duration="13288000" />
       <workItem from="1612723812617" duration="785000" />
-    </task>
-    <task id="LOCAL-00027" summary="Добавил счетчик">
-      <created>1612281762233</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1612281762233</updated>
+      <workItem from="1612736109386" duration="332000" />
     </task>
     <task id="LOCAL-00028" summary="Добавил счетчик">
       <created>1612281889666</created>
@@ -555,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612719646416</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Добавлено обнуление счетчика">
+      <created>1612736368715</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1612736368716</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +593,8 @@
     <MESSAGE value="Добавлен скрипт" />
     <MESSAGE value="Добавлен фикс" />
     <MESSAGE value="Удаляем группу" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удаляем группу" />
+    <MESSAGE value="Добавлено обнуление счетчика" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено обнуление счетчика" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
