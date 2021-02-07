@@ -8,7 +8,12 @@
             <div class="col-md-12">
                 <div class="d-flex justify-content-center">
                     <a class="btn btn-primary" href="{{route('PersonalCabinet')}}">На главную</a>
-                    <a class="btn btn-primary" href="{{route('ApplicationResetCount')}}">Сбросить счетчик</a>
+                    <form method="post" action="{{route('ApplicationResetCount')}}">
+                        @csrf
+                        @method('patch')
+                        <button type="submit" class="btn btn-danger btn-xs" data-title="Delete">Сбросить счетчик
+                        </button>
+                    </form>
                 </div>
                 <div class="table-responsive">
                     <table id="mytable" class="table table-hover table-dark table-hover">

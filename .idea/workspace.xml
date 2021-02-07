@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApplicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApplicationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/applicationIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/applicationIndex.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,14 +210,7 @@
       <workItem from="1612438650318" duration="6013000" />
       <workItem from="1612701816670" duration="13288000" />
       <workItem from="1612723812617" duration="785000" />
-      <workItem from="1612736109386" duration="332000" />
-    </task>
-    <task id="LOCAL-00028" summary="Добавил счетчик">
-      <created>1612281889666</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1612281889666</updated>
+      <workItem from="1612736109386" duration="1175000" />
     </task>
     <task id="LOCAL-00029" summary="Добавил счетчик">
       <created>1612281966239</created>
@@ -553,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612736368716</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Добавлен sbros">
+      <created>1612736489685</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1612736489685</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +596,8 @@
     <MESSAGE value="Добавлен фикс" />
     <MESSAGE value="Удаляем группу" />
     <MESSAGE value="Добавлено обнуление счетчика" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено обнуление счетчика" />
+    <MESSAGE value="Добавлен sbros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен sbros" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
