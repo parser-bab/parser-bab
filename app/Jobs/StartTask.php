@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Application;
 use App\Events\NumberPost;
 use App\Events\TaskUpdated;
 use App\Girl;
@@ -46,13 +47,17 @@ class StartTask implements ShouldQueue
          * Получение имя группы
          * Получение количества постов
          */
-        $access_token = $this->task->vk_token;
+        $application = Application::find($this->task->vk_token);
+
+        $access_token = $application->access_token;
 
         $group = $this->task->url_group;
         $removeChar = ["https://", "http://", "/", 'vk.com'];
         $groupName = str_replace($removeChar, "", $group);
         $numberPosts = $this->task->number_posts;
 
+        $application->count += $numberPosts;
+        $application->save();
 
         /**
          * Получение информации о группе

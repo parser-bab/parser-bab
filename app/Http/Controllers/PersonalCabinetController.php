@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Application;
 use App\Events\TaskUpdated;
 use App\Girl;
 use App\Group;
@@ -36,14 +37,16 @@ class PersonalCabinetController extends Controller
          * @var VKOAuth @oauth
          */
         $oauth = new VKOAuth();
-        $client_id = 7436120;
+        $client_id = 7457469;
 
-        $redirect_uri = 'http://92.38.152.201/second';
+        $redirect_uri = 'http://127.0.0.1/second';
         $display = VKOAuthDisplay::PAGE;
         $scope = array(VKOAuthUserScope::WALL, VKOAuthUserScope::GROUPS);
         $state = 'secret_state_code';
 
         $browser_url = $oauth->getAuthorizeUrl(VKOAuthResponseType::CODE, $client_id, $redirect_uri, $display, $scope, $state);
+
+        //https://oauth.vk.com/authorize?client_id=7457469&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsecond&display=page&scope=270336&state=secret_state_code&response_type=code&v=5.101
         // dd($browser_url);
         $code = $request->input('code');
         //$task = Task::find(1);
@@ -54,6 +57,7 @@ class PersonalCabinetController extends Controller
 
     public function getToken(Request $request)
     {
+        dd($request);
         //     dd($request->input());
         $code = $request->input('code');
 
@@ -79,13 +83,15 @@ class PersonalCabinetController extends Controller
 //       $group = Group::query()->find(1);
 //       $group->girls()->attach($girls);
 //       dd($group->girls()->get());
-        return view('PersonalCabinet.createTask');
+        $applications = Application::all();
+        return view('PersonalCabinet.createTask', compact('applications'));
     }
 
     public function storeTask(Request $request)
     {
+        //dd($request->input());
         $data = $request->input();
-        $data['vk_token'] = auth()->user()->vk_token;
+        //$data['vk_token'] = auth()->user()->vk_token;
         $task = (new Task())->create($data);
         $job = (new StartTask($task));
         $this->dispatch($job);

@@ -40,6 +40,20 @@
                                                type="text"
                                                class="form-control">
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="vk_token">Приложение</label>
+                                        <select name="vk_token"
+                                                id="vk_token"
+                                                class="form-control"
+                                                required>
+                                            @foreach($applications as $application)
+                                                <option value="{{$application->id}}"
+                                                        @if($application->count == 5000 || !$application->access_token || $application->worked) disabled @endif>Приложение #{{$loop->iteration}}. [{{$application->count}}/5000]
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                     <button type="submit" class="btn btn-primary">Запустить</button>
                                     <a href="{{route('PersonalCabinet')}}" class="btn btn-primary">Назад</a>
                                 </div>

@@ -20,6 +20,8 @@
                     <nav class="navbar navbar-toggler navbar-light">
                         @if (auth()->user()->id == 1)
                             <a class="btn btn-primary" href="{{route('PersonalCabinetCreateTask')}}">Добавить</a>
+                            <a class="btn btn-primary" href="{{route('application.create')}}">Добавить приложение</a>
+                            <a class="btn btn-primary" href="{{route('application.index')}}">Показать приложения</a>
                         @endif
                         <a class="btn btn-primary" href="{{route('list.index')}}">Все бабы</a>
                         @if (auth()->user()->id == 1)

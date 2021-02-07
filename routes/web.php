@@ -14,10 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PersonalCabinetController@index')->name('PersonalCabinet');
-Route::get('/second', 'PersonalCabinetController@getToken');
+
 Route::get('/create-task', 'PersonalCabinetController@createTask')->name('PersonalCabinetCreateTask');
 Route::post('/create-task', 'PersonalCabinetController@storeTask')->name('PersonalCabinetStoreTask');
 
+Route::resource('/application', 'ApplicationController');
+Route::get('/application/{application}', 'ApplicationController@writeId')->name('ApplicationWriteId');
+
+
+Route::get('/second', 'ApplicationController@getToken');
 //Route::get('/', function () {
 //    return view('home');
 //});
