@@ -135,7 +135,6 @@ class ApplicationController extends Controller
 
     public function resetCount(Request $request)
     {
-        $req
         $applications = Application::all();
         foreach ($applications as $application) {
             $application->count = 0;
