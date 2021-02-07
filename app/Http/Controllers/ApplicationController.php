@@ -126,7 +126,8 @@ class ApplicationController extends Controller
 
 
         $need->delete();
-        $user = auth()->user()->vk_token = $response['access_token'];
+        $user = auth()->user();
+        $user->vk_token = $response['access_token'];
         $user->save();
 
         return redirect()->route('application.index');
