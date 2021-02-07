@@ -172,7 +172,7 @@ class PersonalCabinetController extends Controller
 //        $group = Group::find(11);
 //        $girls = $group->girls()->get();
 //        $group->girls()->detach($girls);
-        $groups = Group::all();
+        $groups = Task::all();
         $vk = new VKApiClient();
         foreach ($groups as $group) {
             $removeChar = ["https://", "http://", "/", 'vk.com'];
