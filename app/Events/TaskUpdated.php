@@ -15,10 +15,12 @@ class TaskUpdated implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $progress;
+    public $taskId;
 
-    public function __construct($progress)
+    public function __construct($progress, $taskId)
     {
         $this->progress = $progress;
+        $this->taskId = $taskId;
     }
 
     public function broadcastOn()

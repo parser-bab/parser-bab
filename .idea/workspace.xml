@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен редирект">
+    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5c82c109-3ac1-49e6-a9a5-a14df5ff6c93.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5c82c109-3ac1-49e6-a9a5-a14df5ff6c93.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Events/TaskUpdated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/TaskUpdated.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,14 +213,7 @@
       <workItem from="1612361057781" duration="2338000" />
       <workItem from="1612386773503" duration="602000" />
       <workItem from="1612438650318" duration="6013000" />
-      <workItem from="1612701816670" duration="2281000" />
-    </task>
-    <task id="LOCAL-00019" summary="Добавил счетчик">
-      <created>1612182902752</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1612182902752</updated>
+      <workItem from="1612701816670" duration="4960000" />
     </task>
     <task id="LOCAL-00020" summary="Добавил счетчик">
       <created>1612183118401</created>
@@ -552,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612703330433</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Добавлен индикатор работы">
+      <created>1612704579460</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1612704579460</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +590,8 @@
     <MESSAGE value="Добавлен редирект" />
     <MESSAGE value="Добавлена сортировка по имени" />
     <MESSAGE value="Добавлено создание приложений и выбор" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено создание приложений и выбор" />
+    <MESSAGE value="Добавлен индикатор работы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен индикатор работы" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

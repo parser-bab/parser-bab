@@ -92,13 +92,13 @@
 <script>
     window.Echo.channel('longrunningtask')
         .listen('TaskUpdated', (e) => {
-            $('.progress .progress-bar').css('width', function () {
+            $('#task-'+(e.taskId)).css('width', function () {
                 console.log(e.progress);
                 return (e.progress.toFixed(2)) + '%';
             })
-            $('.progress-bar2').html((e.progress.toFixed(2)) + '%');
+            $('#tasktext-'+(e.taskId)).html((e.progress.toFixed(2)) + '%');
             if (e.progress > 99.9) {
-                $('.task-progress').html('Завершено');
+                $('#task-progress-'+(e.taskId)).html('Завершено');
             }
         });
 

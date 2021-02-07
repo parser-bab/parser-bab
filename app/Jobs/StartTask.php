@@ -113,7 +113,7 @@ class StartTask implements ShouldQueue
 
             $this->task->progress = $progress;
             $this->task->save();
-            event(new TaskUpdated($this->task->progress));
+            event(new TaskUpdated($this->task->progress,$this->task->id));
             $last_time = microtime(true);
             //dd($last_time - $first_time);
             $raznica = $last_time - $first_time;
@@ -231,7 +231,7 @@ class StartTask implements ShouldQueue
 
             $this->task->progress = $progress;
             $this->task->save();
-            event(new TaskUpdated($this->task->progress));
+            event(new TaskUpdated($this->task->progress, $this->task->id));
 
             //sleep(1);
         }
@@ -249,7 +249,7 @@ class StartTask implements ShouldQueue
         if(count($finalResult) === 0) {
             $this->task->progress = 100;
             $this->task->save();
-            event(new TaskUpdated($this->task->progress));
+            event(new TaskUpdated($this->task->progress,$this->task->id));
         }
         else {
             $cicles3 = 33.34/count($finalResult);
@@ -261,7 +261,7 @@ class StartTask implements ShouldQueue
             $progress += $cicles3;
             $this->task->progress = $progress;
             $this->task->save();
-            event(new TaskUpdated($this->task->progress));
+            event(new TaskUpdated($this->task->progress,$this->task->id));
 
             //dd(!(Girl::where('url', 'http://vk.com/id'.$result['id']))->first());
             if(!(Girl::where('url', 'http://vk.com/id'.$result['id']))->first()) {

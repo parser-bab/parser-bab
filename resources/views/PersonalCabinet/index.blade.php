@@ -68,13 +68,13 @@
                                     @if ($task->progress == 100)
                                         <h4>Завершено</h4>
                                     @else
-                                        <div class="task-progress">
+                                        <div class="task-progress" id="task-progress-{{$task->id}}">
                                             <div style="height: 60px;" class="progress">
                                                 <div class="number-post"></div>
-                                                <div class="progress-bar " role="progressbar"
+                                                <div id="task-{{$task->id}}" class="progress-bar " role="progressbar"
                                                      style="width: {{$task->progress}}%" aria-valuenow="47"
-                                                     aria-valuemin="0" aria-valuemax="100"><h3
-                                                        class="text-body progress-bar2">{{$task->progress}}</h3></div>
+                                                     aria-valuemin="0" aria-valuemax="100"><h3 id="tasktext-{{$task->id}}"
+                                                        class="text-body">{{$task->progress}}</h3></div>
                                             </div>
                                         </div>
                                     @endif
