@@ -169,9 +169,27 @@ class PersonalCabinetController extends Controller
 //                $girl->groups()->attach($group);
 //            }
 //       }
-        $group = Group::find(11);
-        $girls = $group->girls()->get();
-        $group->girls()->detach($girls);
+//        $group = Group::find(11);
+//        $girls = $group->girls()->get();
+//        $group->girls()->detach($girls);
+        $groups = Group::all();
+        $vk = new VKApiClient();
+        foreach ($groups as $group) {
+            $removeChar = ["https://", "http://", "/", 'vk.com'];
+            $groupName  = str_replace($removeChar, "", $group->url_group);
+            $owner = $vk->groups()->getById(auth()->user()->vk_token, array(
+                'group_ids' => $groupName
+            ));
+            $group->title = $owner[0]['name'];
+            $group->save();
+            usleep(340000);
+        }
+
+
+
+//        $name = $owner[0]['name'];
+//        $task = Task::where('title', $name)->get();
+
 
     }
 

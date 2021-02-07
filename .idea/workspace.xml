@@ -7,13 +7,7 @@
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApplicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApplicationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/createTask.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/createTask.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,21 +208,7 @@
       <workItem from="1612361057781" duration="2338000" />
       <workItem from="1612386773503" duration="602000" />
       <workItem from="1612438650318" duration="6013000" />
-      <workItem from="1612701816670" duration="11744000" />
-    </task>
-    <task id="LOCAL-00022" summary="Добавил счетчик">
-      <created>1612183615637</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1612183615637</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Добавил счетчик">
-      <created>1612183846593</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1612183846593</updated>
+      <workItem from="1612701816670" duration="12432000" />
     </task>
     <task id="LOCAL-00024" summary="Добавил счетчик">
       <created>1612184264572</created>
@@ -559,7 +539,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612707402165</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Добавлена проверка групп и чек">
+      <created>1612718381968</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1612718381968</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Исправлена ошибка">
+      <created>1612718466161</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1612718466161</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +588,9 @@
     <MESSAGE value="Добавлен индикатор работы" />
     <MESSAGE value="Добавлен индикатор" />
     <MESSAGE value="Добавлено отображение для каждой задачи" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено отображение для каждой задачи" />
+    <MESSAGE value="Добавлена проверка групп и чек" />
+    <MESSAGE value="Исправлена ошибка" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлена ошибка" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
