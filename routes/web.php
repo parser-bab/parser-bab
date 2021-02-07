@@ -24,6 +24,7 @@ Route::post('/check-task', 'PersonalCabinetController@checkTask');
 
 Route::resource('/application', 'ApplicationController');
 Route::get('/application/{application}', 'ApplicationController@writeId')->name('ApplicationWriteId');
+Route::post('/resetapplication', 'ApplicationController@resetCount')->name('ApplicationResetCount');
 
 
 Route::get('/second', 'ApplicationController@getToken');

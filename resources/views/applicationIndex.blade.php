@@ -8,6 +8,7 @@
             <div class="col-md-12">
                 <div class="d-flex justify-content-center">
                     <a class="btn btn-primary" href="{{route('PersonalCabinet')}}">На главную</a>
+                    <a class="btn btn-primary" href="{{route('ApplicationResetCount')}}">Сбросить счетчик</a>
                 </div>
                 <div class="table-responsive">
                     <table id="mytable" class="table table-hover table-dark table-hover">

@@ -132,4 +132,14 @@ class ApplicationController extends Controller
 
         return redirect()->route('application.index');
     }
+
+    public function resetCount()
+    {
+        $applications = Application::all();
+        foreach ($applications as $application) {
+            $application->count = 0;
+            $application->save();
+        }
+        return redirect()->route('application.index');
+    }
 }
