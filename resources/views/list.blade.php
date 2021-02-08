@@ -33,6 +33,9 @@
                 <div class="d-flex justify-content-center">
                     <a class="btn btn-primary" href="{{route('PersonalCabinet')}}">На главную</a>
                 </div>
+                <div class="d-flex justify-content-center">
+                    {{ $lists->links() }}
+                </div>
                 <div class="table-responsive">
                     <table id="mytable" class="table table-hover table-dark table-hover">
                         <thead>
@@ -115,6 +118,7 @@
             </div>
         </div>
     </div>
+
     <script>
         let cords = ['scrollX', 'scrollY'];
         // Перед закрытием записываем в локалсторадж window.scrollX и window.scrollY как scrollX и scrollY

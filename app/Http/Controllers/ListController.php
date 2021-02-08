@@ -27,7 +27,7 @@ class ListController extends Controller
         $lists = $this->girlModel->with('posts', 'groups')->withCount('groups')
             ->orderByDesc('groups_count')
             ->orderBy('first_name')
-            ->get();
+            ->paginate(30);
         return view('list', compact('lists'));
     }
 
