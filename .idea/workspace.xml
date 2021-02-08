@@ -7,10 +7,6 @@
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,14 +211,8 @@
       <workItem from="1612723812617" duration="785000" />
       <workItem from="1612736109386" duration="1883000" />
       <workItem from="1612790327493" duration="1145000" />
-      <workItem from="1612799688339" duration="1047000" />
-    </task>
-    <task id="LOCAL-00033" summary="Проверка на запись группы">
-      <created>1612299528173</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1612299528173</updated>
+      <workItem from="1612799688339" duration="1762000" />
+      <workItem from="1612803428204" duration="412000" />
     </task>
     <task id="LOCAL-00034" summary="Проверка на запись группы">
       <created>1612299811798</created>
@@ -560,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612790409426</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Добавлено модальное окно удаления, нормальные мидлвары">
+      <created>1612800991580</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1612800991580</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +576,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Сделан редирект и получение ключа" />
     <MESSAGE value="Сделан редирект и получение ключа токена" />
     <MESSAGE value="Почти фулл" />
     <MESSAGE value="Все работает" />
@@ -604,7 +600,8 @@
     <MESSAGE value="Добавлен sbros" />
     <MESSAGE value="Добавлен post" />
     <MESSAGE value="Добавлена дата рождения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена дата рождения" />
+    <MESSAGE value="Добавлено модальное окно удаления, нормальные мидлвары" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено модальное окно удаления, нормальные мидлвары" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
