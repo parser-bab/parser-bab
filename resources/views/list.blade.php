@@ -115,6 +115,9 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="d-flex justify-content-center">
+                    {{ $lists->links() }}
+                </div>
             </div>
         </div>
     </div>
