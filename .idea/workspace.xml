@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,14 +215,7 @@
       <workItem from="1612799688339" duration="1762000" />
       <workItem from="1612803428204" duration="1620000" />
       <workItem from="1612808611758" duration="195000" />
-      <workItem from="1612817226473" duration="923000" />
-    </task>
-    <task id="LOCAL-00035" summary="Проверка на запись группы">
-      <created>1612299852998</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1612299852998</updated>
+      <workItem from="1612817226473" duration="2364000" />
     </task>
     <task id="LOCAL-00036" summary="Проверка на запись группы">
       <created>1612299961169</created>
@@ -561,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612803879172</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Добавлена пагинация">
+      <created>1612818297217</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1612818297217</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +579,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Почти фулл" />
     <MESSAGE value="Все работает" />
     <MESSAGE value="Все работает 2" />
     <MESSAGE value="Все работает 3" />
@@ -605,7 +603,8 @@
     <MESSAGE value="Добавлена дата рождения" />
     <MESSAGE value="Добавлено модальное окно удаления, нормальные мидлвары" />
     <MESSAGE value="Добавлена страница" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница" />
+    <MESSAGE value="Добавлена пагинация" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена пагинация" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
