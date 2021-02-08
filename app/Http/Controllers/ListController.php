@@ -103,6 +103,16 @@ class ListController extends Controller
         return redirect(route('list.index'));
     }
 
+    public function destroyApi(Request $request)
+    {
+        $girl = Girl::findOrFail($request->input('id'));
+        $groups = $girl->groups()->get();
+        $posts = $girl->posts()->get();
+        $girl->groups()->detach($groups);
+        $girl->posts()->detach($posts);
+        $girl->delete();
+    }
+
     function removedata(Request $request)
     {
         $girl = Girl::findOrFail($request->input('id'));

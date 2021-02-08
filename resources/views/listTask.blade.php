@@ -19,9 +19,10 @@
                     <th>Фамилия</th>
                     <th>Дата</th>
                     <th>Группа</th>
-                    @if (auth()->user()->id == 1)
-                        <th>Посты</th>
-                        <th>Удалить</th>
+                    @if(!auth()->guest())
+                        @if (auth()->user()->id == 1)
+                            <th>Посты</th>
+                        @endif
                     @endif
                     </thead>
                     <tbody class="">
@@ -44,19 +45,12 @@
                                     <h3><a href="{{$group->url_group}}">| {{$group->title}} |</a></h3>
                                 @endforeach
                             </td>
-                            @if (auth()->user()->id == 1)
-                                <td class="align-middle">
-                                   <h3> <a href="{{route('girl.show', $list->id)}}">Список постов</a></h3>
-                                </td>
-                                <td class="align-middle">
-                                    <form style="margin: 0" method="post"
-                                          action="{{route('list.destroy', ['list' => $list->id])}}">
-                                        @csrf
-                                        @method('delete')
-                                        <button type="submit" class="btn btn-danger btn-xs" data-title="Delete">X
-                                        </button>
-                                    </form>
-                                </td>
+                            @if(!auth()->guest())
+                                @if (auth()->user()->id == 1)
+                                    <td class="align-middle">
+                                        <h3><a href="{{route('girl.show', $list->id)}}">Список постов</a></h3>
+                                    </td>
+                                @endif
                             @endif
 
                         </tr>

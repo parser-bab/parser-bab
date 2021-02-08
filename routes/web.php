@@ -37,6 +37,7 @@ Route::get('/api', 'ApiController@index');
 
 Route::resource('/list', 'ListController');
 Route::resource('/girl', 'GirlController');
+Route::post('/deletegirl', 'ListController@destroyApi');
 Route::resource('/task', 'TaskController');
 Route::get('list/removedata', 'ListController@removedata')->name('list.removedata');
 
