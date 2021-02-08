@@ -38,7 +38,7 @@
                             </td>
                             <td class="align-middle"><h3>{{$list->first_name}}</h3></td>
                             <td class="align-middle"><h3>{{$list->last_name}}</h3></td>
-                            <td class="align-middle"><h3></h3></td>
+                            <td class="align-middle"><h3>{{$list->bdate}}</h3></td>
                             <td class="align-middle">
                                 @foreach($list->groups as $group)
                                     <h3><a href="{{$group->url_group}}">| {{$group->title}} |</a></h3>
