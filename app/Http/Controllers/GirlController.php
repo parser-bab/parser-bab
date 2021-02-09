@@ -94,4 +94,11 @@ class GirlController extends Controller
         $girl->save();
         return response()->json($girl,200);
     }
+
+    public function setWrite(Request $request) {
+        $girl = Girl::find($request->input('id'));
+        $girl->write = $request->input('write');
+        $girl->save();
+        return response()->json($girl,200);
+    }
 }

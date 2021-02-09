@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::post('/setpisal', 'GirlController@setPisal');
+Route::post('/setwrite', 'GirlController@setWrite');
+
 
 
 Route::get('/', 'PersonalCabinetController@index')->name('PersonalCabinet');

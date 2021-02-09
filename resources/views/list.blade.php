@@ -59,7 +59,7 @@
 
 
                             <tr id="girl-{{$list->id}}"
-                                @if($list->is_pisal === 1) style="background-color: #1a3972" @endif>
+                                @if($list->is_pisal === 1) style="background-color: #1a3972" @elseif ($list->write === 1) style="background-color: #1e4739" @endif>
                                 <td class="align-middle"><h3>{{$loop->iteration}}.</h3></td>
                                 <td class="align-middle">
                                     <a href="{{$list->url}}" target="_blank">
@@ -83,7 +83,7 @@
                                                 {{--                                        <input name="is_pisal"--}}
                                                 {{--                                               type="hidden"--}}
                                                 {{--                                               value="{{['0' => $list->id]}}">--}}
-                                                <input style=""
+                                                <input style="position: absolute; clip: rect(0,0,0,0); pointer-events: none"
                                                        name="is_pisal"
                                                        type="checkbox"
                                                        class="btn-check"
@@ -94,6 +94,18 @@
                                                     @endif
                                                 >
                                                 <label class="btn btn-outline-primary" for="{{$list->id}}">Писал</label>
+
+                                                <input style="position: absolute; clip: rect(0,0,0,0); pointer-events: none"
+                                                       name="write"
+                                                       type="checkbox"
+                                                       class="btn-check2"
+                                                       id="write-{{$list->id}}" autocomplete="off"
+                                                       value="{{$list->id}}"
+                                                       @if($list->write)
+                                                       checked="checked"
+                                                    @endif
+                                                >
+                                                <label class="btn btn-outline-primary" for="write-{{$list->id}}">Надо написать</label>
                                             </div>
                                         </td>
 
@@ -158,6 +170,35 @@
                     })
                 }
             })
+
+            $('.btn-check2').change(function () {
+                if ($(this).is(":checked")) {
+                    let id = $(this).val()
+                    axios.post('/setwrite', {
+                        id: id,
+                        write: 1,
+                    }).then((response) => {
+                        console.log(id)
+                        console.log(response.data)
+                        $('#girl-' + (id)).css('background-color', function () {
+                            return '#1e4739';
+                        })
+                    })
+                } else {
+                    let id = $(this).val()
+                    axios.post('/setwrite', {
+                        id: id,
+                        write: 0,
+                    }).then((response) => {
+                        console.log(id)
+                        console.log(response.data)
+                        $('#girl-' + (id)).css('background-color', function () {
+                            return '';
+                        })
+                    })
+                }
+            })
+
 
             $('.delete-button').on('click', function () {
                 let a = $(this).data('id');
