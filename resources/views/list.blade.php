@@ -34,7 +34,7 @@
                     <a class="btn btn-primary" href="{{route('PersonalCabinet')}}">На главную</a>
                 </div>
                 <div class="d-flex justify-content-center">
-                    {{ $lists->links() }}
+                    {{ $lists->onEachSide(3)->links() }}
                 </div>
                 <div class="table-responsive">
                     <table id="mytable" class="table table-hover table-dark table-hover">
@@ -116,7 +116,7 @@
                     </table>
                 </div>
                 <div class="d-flex justify-content-center">
-                    {{ $lists->links() }}
+                    {{ $lists->onEachSide(3)->links() }}
                 </div>
             </div>
         </div>
