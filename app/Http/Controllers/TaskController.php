@@ -48,7 +48,7 @@ class TaskController extends Controller
     public function show($id)
     {
         $task = Task::findOrFail($id);
-        $lists = Group::where('url_group', $task->url_group)->first()->girls()->with('groups')->get();
+        $lists = Group::where('url_group', $task->url_group)->first()->girls()->with('groups')->paginate(30);
         //dd($lists[0]->groups_count);
         return view('list', compact('lists'));
     }
