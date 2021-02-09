@@ -24,6 +24,7 @@
                         @endif
                     @endif
                     <a class="btn btn-primary" href="{{route('list.index')}}">Все бабы</a>
+                    <a class="btn btn-primary" href="{{route('list.indexNorm')}}">Все бабы нормальные</a>
                     @if(!auth()->guest())
                         @if (auth()->user()->id == 1)
                             <form style="margin: 0" method="post" action="{{route('job.clear')}}">

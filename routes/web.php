@@ -38,6 +38,7 @@ Route::get('/api', 'ApiController@index');
 
 
 Route::resource('/list', 'ListController');
+Route::get('/listnorm', 'ListController@indexNorm')->name('list.indexNorm');
 Route::resource('/girl', 'GirlController');
 Route::post('/deletegirl', 'ListController@destroyApi');
 Route::resource('/task', 'TaskController');

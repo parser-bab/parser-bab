@@ -7,8 +7,7 @@
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,14 +218,7 @@
       <workItem from="1612808611758" duration="195000" />
       <workItem from="1612817226473" duration="2900000" />
       <workItem from="1612879396811" duration="396000" />
-      <workItem from="1612881384643" duration="1609000" />
-    </task>
-    <task id="LOCAL-00038" summary="Проверка на запись группы">
-      <created>1612300075827</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1612300075827</updated>
+      <workItem from="1612881384643" duration="2603000" />
     </task>
     <task id="LOCAL-00039" summary="Проверка на запись группы">
       <created>1612300193361</created>
@@ -564,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612820066539</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Добавлена новая отметка &quot;написать&quot;">
+      <created>1612887551955</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1612887551956</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +582,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Все работает 3" />
     <MESSAGE value="Добавил счетчик" />
     <MESSAGE value="Проверка на запись группы" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php" />
@@ -608,7 +606,8 @@
     <MESSAGE value="Добавлена пагинация" />
     <MESSAGE value="Фикс возраста" />
     <MESSAGE value="Пагинация" />
-    <option name="LAST_COMMIT_MESSAGE" value="Пагинация" />
+    <MESSAGE value="Добавлена новая отметка &quot;написать&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена новая отметка &quot;написать&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

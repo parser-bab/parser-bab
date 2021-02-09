@@ -22,6 +22,13 @@ class ListController extends Controller
         $this->girlModel = app()->make(Girl::class);
     }
 
+    public function indexNorm()
+    {
+        $lists = $this->girlModel->where('write', 1)->with('posts', 'groups')->withCount('groups')
+            ->paginate(30);
+        return view('list', compact('lists'));
+    }
+
     public function index()
     {
         $lists = $this->girlModel->with('posts', 'groups')->withCount('groups')
