@@ -41,13 +41,17 @@
                         <thead>
                         <th>№</th>
                         <th>Фото</th>
+                        @if(!auth()->guest())
+                            @if (auth()->user()->id == 1)
+                                <th>Писал</th>
+                            @endif
+                        @endif
                         <th>Имя</th>
                         <th>Фамилия</th>
                         <th>Дата</th>
                         <th>Группа</th>
                         @if(!auth()->guest())
                             @if (auth()->user()->id == 1)
-                                <th>Писал</th>
                                 <th>Посты</th>
                                 <th>Удалить</th>
                             @endif
@@ -68,17 +72,9 @@
                                     </a>
 
                                 </td>
-                                <td class="align-middle"><h3>{{$list->first_name}}</h3></td>
-                                <td class="align-middle"><h3>{{$list->last_name}}</h3></td>
-                                <td class="align-middle"><h3>{{$list->bdate}}</h3></td>
-                                <td class="align-middle">
-                                    @foreach($list->groups as $group)
-                                        <h3><a href="{{$group->url_group}}">| {{$group->title}} |</a></h3>
-                                    @endforeach
-                                </td>
-                                @if(!auth()->guest())
+                                 @if(!auth()->guest())
                                     @if (auth()->user()->id == 1)
-                                        <td class="align-middle">
+                                <td class="align-middle">
                                             <div class="form-check">
                                                 {{--                                        <input name="is_pisal"--}}
                                                 {{--                                               type="hidden"--}}
@@ -108,6 +104,20 @@
                                                 <label class="btn btn-outline-primary" for="write-{{$list->id}}">Надо написать</label>
                                             </div>
                                         </td>
+                                @endif
+                                @endif
+
+                                <td class="align-middle"><h3>{{$list->first_name}}</h3></td>
+                                <td class="align-middle"><h3>{{$list->last_name}}</h3></td>
+                                <td class="align-middle"><h3>{{$list->bdate}}</h3></td>
+                                <td class="align-middle">
+                                    @foreach($list->groups as $group)
+                                        <h3><a href="{{$group->url_group}}">| {{$group->title}} |</a></h3>
+                                    @endforeach
+                                </td>
+                                @if(!auth()->guest())
+                                    @if (auth()->user()->id == 1)
+                                     
 
                                         <td class="align-middle">
                                             <h3><a href="{{route('girl.show', $list->id)}}">Список постов</a></h3>
