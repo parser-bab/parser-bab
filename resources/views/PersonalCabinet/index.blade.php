@@ -21,7 +21,7 @@
                             <a class="btn btn-primary" href="{{route('PersonalCabinetCreateTask')}}">Добавить</a>
                             <a class="btn btn-primary" href="{{route('application.create')}}">Добавить приложение</a>
                             <a class="btn btn-primary" href="{{route('application.index')}}">Показать приложения</a>
-                            <a class="btn btn-primary" href="{{route('application.index')}}">Показать приложения</a>
+                            <a class="btn btn-primary" href="{{route('girl.online')}}">Обновить онлайн</a>
                         @endif
                     @endif
                     <a class="btn btn-primary" href="{{route('list.index')}}">Все бабы</a>

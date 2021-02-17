@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
-      <change afterPath="$PROJECT_DIR$/resources/views/girlOnline.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/13a2a30d-a6a0-4eb8-80d9-52e8c6dc143c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/13a2a30d-a6a0-4eb8-80d9-52e8c6dc143c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/girlOnline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/girlOnline.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,14 +221,7 @@
       <workItem from="1612879396811" duration="396000" />
       <workItem from="1612881384643" duration="2723000" />
       <workItem from="1612975919102" duration="17000" />
-      <workItem from="1613595382470" duration="5589000" />
-    </task>
-    <task id="LOCAL-00040" summary="Проверка на запись группы">
-      <created>1612300260537</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1612300260537</updated>
+      <workItem from="1613595382470" duration="7798000" />
     </task>
     <task id="LOCAL-00041" summary="Проверка на запись группы">
       <created>1612300630091</created>
@@ -571,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612893160459</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Добавлено время онлайа">
+      <created>1613601146715</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1613601146715</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +585,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Проверка на запись группы" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php" />
     <MESSAGE value="Увеличен шрифт, добавлена сортировка" />
     <MESSAGE value="Добавлен редирект" />
@@ -615,7 +609,8 @@
     <MESSAGE value="Добавлена новая отметка &quot;написать&quot;" />
     <MESSAGE value="Добавлен индикатор" />
     <MESSAGE value="Добавлен запрос" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен запрос" />
+    <MESSAGE value="Добавлено время онлайа" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено время онлайа" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -102,6 +102,11 @@
             }
         });
 
+    window.Echo.channel('update-girl')
+        .listen('CheckUpdate', (e) => {
+            $('#checked').html(e.count);
+        });
+
 </script>
 <script>
 
