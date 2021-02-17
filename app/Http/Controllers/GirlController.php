@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Girl;
+use App\UpdateOnline;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use VK\Client\VKApiClient;
 
 class GirlController extends Controller
 {
@@ -101,4 +104,52 @@ class GirlController extends Controller
         $girl->save();
         return response()->json($girl,200);
     }
+
+    public function online()
+    {
+        $girl_count = Girl::count();
+//        $update_online = UpdateOnline::first();
+        return view('girlOnline', compact('girl_count'));
+    }
+
+    public function updateOnline()
+    {
+        $girls = Girl::all();
+        $girls_count = Girl::all()->count();
+        $count = ceil($girls_count/1000);
+
+
+        $vk = new VKApiClient();
+        $access_token = auth()->user()->vk_token;
+
+        $offset = 0;
+        for ($i = 0; $i <= $count; ++$i) {
+            $girl_list = $girls->slice($offset, 1000);
+
+            $profilesId = [];
+
+            foreach($girl_list as $girl) {
+                $removeChar = ["https://", "http://", "/", 'vk.com', 'id'];
+                $girl_id = str_replace($removeChar, "", $girl->url);
+                $profilesId[] = $girl_id;
+            }
+
+
+            $getInfoUser = $vk->users()->get($access_token, array(
+                'user_ids' => $profilesId,
+                'fields' => 'photo_200,city,sex,bdate,last_seen'
+            ));
+            foreach ($getInfoUser as $user) {
+                if (isset($user['last_seen']['time'])) {
+                    $girl_new = Girl::where('url', 'like', '%'.$user['id'])->first();
+                    $girl_new->last_seen = Carbon::createFromTimestamp($user['last_seen']['time'])->addHours(2)->format('d.m.Y H:i');
+                    $girl_new->save();
+                }
+            }
+            $offset += 1000;
+        }
+        return redirect()->route('PersonalCabinet');
+
+    }
+
 }

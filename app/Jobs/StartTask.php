@@ -9,6 +9,7 @@ use App\Girl;
 use App\Group;
 use App\Post;
 use App\Task;
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -193,7 +194,7 @@ class StartTask implements ShouldQueue
 
                 $getInfoUser = $vk->users()->get($access_token, array(
                     'user_ids' => $profilesId,
-                    'fields' => 'photo_200,city,sex,bdate'
+                    'fields' => 'photo_200,city,sex,bdate,last_seen'
                 ));
 
 
@@ -275,6 +276,14 @@ class StartTask implements ShouldQueue
                 else {
                     $girl->bdate = '---';
                 }
+
+                if(isset($result['last_seen'])) {
+                    $girl->last_seen = Carbon::createFromTimestamp($result['last_seen']['time'])->addHours(2)->format('d.m.Y H:i');
+                }
+                else {
+                    $girl->last_seen = '---';
+                }
+
                 $girl->photo = $result['photo'];
                 $girl->group = $result['group'];
                 $girl->group_name = $result['group_name'];
@@ -381,27 +390,56 @@ class StartTask implements ShouldQueue
             //2256
             if ($infoUser['sex'] == 1 and $infoUser['city']['id'] == 650) {
                 if (isset($infoUser['bdate'])) {
-                    $end [] = [
-                        'id' => $infoUser['id'],
-                        'is_closed' => $infoUser['is_closed'],
-                        'first_name' => $infoUser['first_name'],
-                        'last_name' => $infoUser['last_name'],
-                        'bdate' => $infoUser['bdate'],
-                        'photo' => $infoUser['photo_200'],
-                        'group_name' => $groupNameForList,
-                        'group' => 'https://vk.com/public'.$ownerId
-                    ];
+                    if(isset($infoUser['last_seen'])) {
+                        $end [] = [
+                            'id' => $infoUser['id'],
+                            'is_closed' => $infoUser['is_closed'],
+                            'first_name' => $infoUser['first_name'],
+                            'last_name' => $infoUser['last_name'],
+                            'bdate' => $infoUser['bdate'],
+                            'last_seen' => $infoUser['last_seen']['time'],
+                            'photo' => $infoUser['photo_200'],
+                            'group_name' => $groupNameForList,
+                            'group' => 'https://vk.com/public'.$ownerId
+                        ];
+                    }
+                    else {
+                        $end [] = [
+                            'id' => $infoUser['id'],
+                            'is_closed' => $infoUser['is_closed'],
+                            'first_name' => $infoUser['first_name'],
+                            'last_name' => $infoUser['last_name'],
+                            'bdate' => $infoUser['bdate'],
+                            'photo' => $infoUser['photo_200'],
+                            'group_name' => $groupNameForList,
+                            'group' => 'https://vk.com/public'.$ownerId
+                        ];
+                    }
                 }
                 else {
-                    $end [] = [
-                        'id' => $infoUser['id'],
-                        'is_closed' => $infoUser['is_closed'],
-                        'first_name' => $infoUser['first_name'],
-                        'last_name' => $infoUser['last_name'],
-                        'photo' => $infoUser['photo_200'],
-                        'group_name' => $groupNameForList,
-                        'group' => 'https://vk.com/public'.$ownerId
-                    ];
+                    if(isset($infoUser['last_seen'])) {
+                        $end [] = [
+                            'id' => $infoUser['id'],
+                            'is_closed' => $infoUser['is_closed'],
+                            'first_name' => $infoUser['first_name'],
+                            'last_name' => $infoUser['last_name'],
+                            'photo' => $infoUser['photo_200'],
+                            'last_seen' => $infoUser['last_seen']['time'],
+                            'group_name' => $groupNameForList,
+                            'group' => 'https://vk.com/public'.$ownerId
+                        ];
+                    }
+                    else {
+                        $end [] = [
+                            'id' => $infoUser['id'],
+                            'is_closed' => $infoUser['is_closed'],
+                            'first_name' => $infoUser['first_name'],
+                            'last_name' => $infoUser['last_name'],
+                            'photo' => $infoUser['photo_200'],
+                            'group_name' => $groupNameForList,
+                            'group' => 'https://vk.com/public'.$ownerId
+                        ];
+                    }
                 }
 
                 //dd($end);

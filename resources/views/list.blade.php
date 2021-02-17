@@ -46,6 +46,7 @@
                                 <th>Писал</th>
                             @endif
                         @endif
+                        <th>Онлайн</th>
                         <th>Имя</th>
                         <th>Фамилия</th>
                         <th>Дата</th>
@@ -63,7 +64,8 @@
 
 
                             <tr id="girl-{{$list->id}}"
-                                @if($list->is_pisal === 1) style="background-color: #1a3972" @elseif ($list->write === 1) style="background-color: #1e4739" @endif>
+                                @if($list->is_pisal === 1) style="background-color: #1a3972"
+                                @elseif ($list->write === 1) style="background-color: #1e4739" @endif>
                                 <td class="align-middle"><h3>{{$loop->iteration}}.</h3></td>
                                 <td class="align-middle">
                                     <a href="{{$list->url}}" target="_blank">
@@ -72,41 +74,44 @@
                                     </a>
 
                                 </td>
-                                 @if(!auth()->guest())
+                                @if(!auth()->guest())
                                     @if (auth()->user()->id == 1)
-                                <td class="align-middle">
+                                        <td class="align-middle">
                                             <div class="form-check">
                                                 {{--                                        <input name="is_pisal"--}}
                                                 {{--                                               type="hidden"--}}
                                                 {{--                                               value="{{['0' => $list->id]}}">--}}
-                                                <input style="position: absolute; clip: rect(0,0,0,0); pointer-events: none"
-                                                       name="is_pisal"
-                                                       type="checkbox"
-                                                       class="btn-check"
-                                                       id="{{$list->id}}" autocomplete="off"
-                                                       value="{{$list->id}}"
-                                                       @if($list->is_pisal)
-                                                       checked="checked"
+                                                <input
+                                                    style="position: absolute; clip: rect(0,0,0,0); pointer-events: none"
+                                                    name="is_pisal"
+                                                    type="checkbox"
+                                                    class="btn-check"
+                                                    id="{{$list->id}}" autocomplete="off"
+                                                    value="{{$list->id}}"
+                                                    @if($list->is_pisal)
+                                                    checked="checked"
                                                     @endif
                                                 >
                                                 <label class="btn btn-outline-primary" for="{{$list->id}}">Писал</label>
 
-                                                <input style="position: absolute; clip: rect(0,0,0,0); pointer-events: none"
-                                                       name="write"
-                                                       type="checkbox"
-                                                       class="btn-check2"
-                                                       id="write-{{$list->id}}" autocomplete="off"
-                                                       value="{{$list->id}}"
-                                                       @if($list->write)
-                                                       checked="checked"
+                                                <input
+                                                    style="position: absolute; clip: rect(0,0,0,0); pointer-events: none"
+                                                    name="write"
+                                                    type="checkbox"
+                                                    class="btn-check2"
+                                                    id="write-{{$list->id}}" autocomplete="off"
+                                                    value="{{$list->id}}"
+                                                    @if($list->write)
+                                                    checked="checked"
                                                     @endif
                                                 >
-                                                <label class="btn btn-outline-primary" for="write-{{$list->id}}">Надо написать</label>
+                                                <label class="btn btn-outline-primary" for="write-{{$list->id}}">Надо
+                                                    написать</label>
                                             </div>
                                         </td>
+                                    @endif
                                 @endif
-                                @endif
-
+                                <td class="align-middle"><h3>{{$list->last_seen}}</h3></td>
                                 <td class="align-middle"><h3>{{$list->first_name}}</h3></td>
                                 <td class="align-middle"><h3>{{$list->last_name}}</h3></td>
                                 <td class="align-middle"><h3>{{$list->bdate}}</h3></td>
@@ -117,7 +122,7 @@
                                 </td>
                                 @if(!auth()->guest())
                                     @if (auth()->user()->id == 1)
-                                     
+
 
                                         <td class="align-middle">
                                             <h3><a href="{{route('girl.show', $list->id)}}">Список постов</a></h3>

@@ -40,6 +40,8 @@ Route::get('/api', 'ApiController@index');
 Route::resource('/list', 'ListController');
 Route::get('/listnorm', 'ListController@indexNorm')->name('list.indexNorm');
 Route::resource('/girl', 'GirlController');
+Route::get('/online', 'GirlController@online')->name('girl.online');
+Route::get('/online/update', 'GirlController@updateOnline')->name('girl.update.online');
 Route::post('/deletegirl', 'ListController@destroyApi');
 Route::resource('/task', 'TaskController');
 Route::get('list/removedata', 'ListController@removedata')->name('list.removedata');
