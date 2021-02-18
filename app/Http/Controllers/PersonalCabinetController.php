@@ -92,7 +92,7 @@ class PersonalCabinetController extends Controller
         $data = $request->input();
 
         $group = $data['url_group'];
-        $removeChar = ["https://", "http://", "/", 'vk.com'];
+        $removeChar = ["https://", "http://", "/", 'vk.com', 'public'];
         $groupName = str_replace($removeChar, "", $group);
 
         $vk = new VKApiClient();
