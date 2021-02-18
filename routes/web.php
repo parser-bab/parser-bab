@@ -39,6 +39,9 @@ Route::get('/api', 'ApiController@index');
 
 Route::resource('/list', 'ListController');
 Route::get('/listnorm', 'ListController@indexNorm')->name('list.indexNorm');
+Route::get('/listdate', 'ListController@indexByDate')->name('list.indexByDate');
+
+
 Route::resource('/girl', 'GirlController');
 Route::get('/online', 'GirlController@online')->name('girl.online');
 Route::get('/online/update', 'GirlController@updateOnline')->name('girl.update.online');

@@ -38,6 +38,16 @@ class ListController extends Controller
         return view('list', compact('lists'));
     }
 
+    public function indexByDate()
+    {
+        $lists = $this->girlModel->where('write', 1)
+            ->orderByDesc('last_seen')
+            ->with('posts', 'groups')
+            ->withCount('groups')
+            ->paginate(30);
+        return view('list', compact('lists'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
