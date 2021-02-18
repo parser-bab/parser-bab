@@ -276,10 +276,10 @@ class StartTask implements ShouldQueue
                 }
 
                 if(isset($result['last_seen'])) {
-                    $girl->last_seen = Carbon::createFromTimestamp($result['last_seen']['time'])->addHours(2)->format('d.m.Y H:i');
+                    $girl->last_seen = $result['last_seen']['time'];
                 }
                 else {
-                    $girl->last_seen = '---';
+                    $girl->last_seen = '0';
                 }
 
                 $girl->photo = $result['photo'];

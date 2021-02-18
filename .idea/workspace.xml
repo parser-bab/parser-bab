@@ -8,6 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/CheckUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/CheckUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,13 +224,8 @@
       <workItem from="1612975919102" duration="17000" />
       <workItem from="1613595382470" duration="8038000" />
       <workItem from="1613651374728" duration="1968000" />
-    </task>
-    <task id="LOCAL-00045" summary="Проверка на запись группы">
-      <created>1612300792533</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1612300792533</updated>
+      <workItem from="1613654356332" duration="1069000" />
+      <workItem from="1613684549198" duration="1236000" />
     </task>
     <task id="LOCAL-00046" summary="Проверка на запись группы">
       <created>1612300985458</created>
@@ -565,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613653029151</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Мж">
+      <created>1613654398110</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1613654398110</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +589,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлено создание приложений и выбор" />
     <MESSAGE value="Добавлен индикатор работы" />
     <MESSAGE value="Добавлено отображение для каждой задачи" />
     <MESSAGE value="Добавлена проверка групп и чек" />
@@ -609,7 +613,8 @@
     <MESSAGE value="Исправлена ошибка с сохранением" />
     <MESSAGE value="Исправлен запрос" />
     <MESSAGE value="FIX" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX" />
+    <MESSAGE value="Мж" />
+    <option name="LAST_COMMIT_MESSAGE" value="Мж" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

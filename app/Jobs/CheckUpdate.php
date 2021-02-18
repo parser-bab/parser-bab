@@ -60,7 +60,7 @@ class CheckUpdate implements ShouldQueue
             foreach ($getInfoUser as $user) {
                 if (isset($user['last_seen']['time'])) {
                     $girl_new = Girl::where('url', 'like', '%'.$user['id'])->first();
-                    $girl_new->last_seen = Carbon::createFromTimestamp($user['last_seen']['time'])->addHours(2)->format('d.m.Y H:i');
+                    $girl_new->last_seen = $user['last_seen']['time'];
                     $girl_new->save();
                 }
                 ++$counter;

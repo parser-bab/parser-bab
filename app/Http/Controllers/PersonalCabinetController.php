@@ -143,20 +143,27 @@ class PersonalCabinetController extends Controller
     {
         $girls = Girl::all();
         foreach ($girls as $girl) {
-            $count = explode('.', $girl->bdate);
-            if (count($count) == 3) {
-                $first = \Illuminate\Support\Carbon::createFromFormat('d.m.Y', '01.01.1994');
-                $second = Carbon::createFromFormat('d.m.Y', '01.01.2003');
-                $carbon = Carbon::createFromFormat('d.m.Y', $girl->bdate)->between($first, $second);
-                if($carbon === false) {
-                    $groups = $girl->groups()->get();
-                    $posts = $girl->posts()->get();
-                    $girl->groups()->detach($groups);
-                    $girl->posts()->detach($posts);
-                    $girl->delete();
-                }
+            if($girl->last_seen !== '0') {
+                $girl->last_seen = Carbon::parse($girl->last_seen)->timestamp;
+                $girl->save();
             }
         }
+//        $girls = Girl::all();
+//        foreach ($girls as $girl) {
+//            $count = explode('.', $girl->bdate);
+//            if (count($count) == 3) {
+//                $first = \Illuminate\Support\Carbon::createFromFormat('d.m.Y', '01.01.1994');
+//                $second = Carbon::createFromFormat('d.m.Y', '01.01.2003');
+//                $carbon = Carbon::createFromFormat('d.m.Y', $girl->bdate)->between($first, $second);
+//                if($carbon === false) {
+//                    $groups = $girl->groups()->get();
+//                    $posts = $girl->posts()->get();
+//                    $girl->groups()->detach($groups);
+//                    $girl->posts()->detach($posts);
+//                    $girl->delete();
+//                }
+//            }
+//        }
 //        for ($i = 1; $i <= 1767; ++$i) {
 //            $item = DB::table('girl_post')
 //                ->where('id', $i)
