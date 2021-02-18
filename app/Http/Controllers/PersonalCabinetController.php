@@ -126,7 +126,7 @@ class PersonalCabinetController extends Controller
     public function checkTask(Request $request)
     {
         $group = $request->input('url');
-        $removeChar = ["https://", "http://", "/", 'vk.com'];
+        $removeChar = ["https://", "http://", "/", 'vk.com', 'public'];
         $groupName = str_replace($removeChar, "", $group);
 
         $vk = new VKApiClient();

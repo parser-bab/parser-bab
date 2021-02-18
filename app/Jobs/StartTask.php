@@ -53,7 +53,7 @@ class StartTask implements ShouldQueue
         $access_token = $application->access_token;
 
         $group = $this->task->url_group;
-        $removeChar = ["https://", "http://", "/", 'vk.com'];
+        $removeChar = ["https://", "http://", "/", 'vk.com', 'public'];
         $groupName = str_replace($removeChar, "", $group);
         $numberPosts = $this->task->number_posts;
 
@@ -286,7 +286,6 @@ class StartTask implements ShouldQueue
                 $girl->group = $result['group'];
                 $girl->group_name = $result['group_name'];
 //            $girl->posts = toJson('aala');
-                dd($girl);
                 $girl->save();
                 $girl->groups()->attach($data);
 
