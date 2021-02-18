@@ -255,10 +255,8 @@ class StartTask implements ShouldQueue
         else {
             $cicles3 = 33.34/count($finalResult);
         }
-
         foreach ($finalResult as $result) {
 //            echo 'Запись '.$i.'/'.count($finalResult).' // '.date('Y-m-d H:i:s').PHP_EOL;
-
             $progress += $cicles3;
             $this->task->progress = $progress;
             $this->task->save();
@@ -288,6 +286,7 @@ class StartTask implements ShouldQueue
                 $girl->group = $result['group'];
                 $girl->group_name = $result['group_name'];
 //            $girl->posts = toJson('aala');
+                dd($girl);
                 $girl->save();
                 $girl->groups()->attach($data);
 
@@ -388,7 +387,7 @@ class StartTask implements ShouldQueue
             }
             //650
             //2256
-            if ($infoUser['sex'] == 1 and $infoUser['city']['id'] == 650) {
+            if ($infoUser['sex'] == 2 and $infoUser['city']['id'] == 650) {
                 if (isset($infoUser['bdate'])) {
                     if(isset($infoUser['last_seen'])) {
                         $end [] = [
@@ -397,7 +396,7 @@ class StartTask implements ShouldQueue
                             'first_name' => $infoUser['first_name'],
                             'last_name' => $infoUser['last_name'],
                             'bdate' => $infoUser['bdate'],
-                            'last_seen' => $infoUser['last_seen']['time'],
+                            'last_seen' => $infoUser['last_seen'],
                             'photo' => $infoUser['photo_200'],
                             'group_name' => $groupNameForList,
                             'group' => 'https://vk.com/public'.$ownerId
@@ -424,7 +423,7 @@ class StartTask implements ShouldQueue
                             'first_name' => $infoUser['first_name'],
                             'last_name' => $infoUser['last_name'],
                             'photo' => $infoUser['photo_200'],
-                            'last_seen' => $infoUser['last_seen']['time'],
+                            'last_seen' => $infoUser['last_seen'],
                             'group_name' => $groupNameForList,
                             'group' => 'https://vk.com/public'.$ownerId
                         ];

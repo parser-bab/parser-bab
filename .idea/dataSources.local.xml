@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Local DataBase BABS" uuid="13a2a30d-a6a0-4eb8-80d9-52e8c6dc143c">
-      <database-info product="MySQL" version="5.5.5-10.4.17-MariaDB" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MARIADB" exact-version="10.4.17" exact-driver-version="8.0">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema" qname="@" />
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
     <data-source name="@localhost" uuid="f35e35a4-0952-43d5-ac27-3ab7c92a02d2">
       <database-info product="MySQL" version="8.0.22-0ubuntu0.20.04.3" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )" dbms="MYSQL" exact-version="8.0.22" exact-driver-version="5.1">
         <extra-name-characters>#@</extra-name-characters>
@@ -35,6 +21,20 @@
         <enabled>true</enabled>
         <ssh-config-id>fd262ecc-a87c-4b48-abcf-c15da29aed5c</ssh-config-id>
       </ssh-properties>
+    </data-source>
+    <data-source name="Локалка" uuid="6784cf98-ae15-4a16-809c-2f4d57025aa2">
+      <database-info product="MySQL" version="5.5.5-10.4.17-MariaDB" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MARIADB" exact-version="10.4.17" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="parser" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

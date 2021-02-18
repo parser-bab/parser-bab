@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлен индикатор">
+    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлены события">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/girlOnline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/girlOnline.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/StartTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StartTask.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +221,8 @@
       <workItem from="1612879396811" duration="396000" />
       <workItem from="1612881384643" duration="2723000" />
       <workItem from="1612975919102" duration="17000" />
-      <workItem from="1613595382470" duration="7798000" />
-    </task>
-    <task id="LOCAL-00041" summary="Проверка на запись группы">
-      <created>1612300630091</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1612300630091</updated>
+      <workItem from="1613595382470" duration="8038000" />
+      <workItem from="1613651374728" duration="1122000" />
     </task>
     <task id="LOCAL-00042" summary="Проверка на запись группы">
       <created>1612300662096</created>
@@ -566,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613601146715</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Добавлены события">
+      <created>1613603324127</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1613603324127</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +586,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php" />
     <MESSAGE value="Увеличен шрифт, добавлена сортировка" />
     <MESSAGE value="Добавлен редирект" />
     <MESSAGE value="Добавлена сортировка по имени" />
@@ -610,7 +610,8 @@
     <MESSAGE value="Добавлен индикатор" />
     <MESSAGE value="Добавлен запрос" />
     <MESSAGE value="Добавлено время онлайа" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено время онлайа" />
+    <MESSAGE value="Добавлены события" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены события" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
