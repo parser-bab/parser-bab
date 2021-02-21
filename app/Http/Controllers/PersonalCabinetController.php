@@ -142,8 +142,78 @@ class PersonalCabinetController extends Controller
     public function fix()
     {
 //        $girls = Girl::all();
-        $string = 'http://vk.com/id391745263
-http://vk.com/id570111650';
+        $string = 'https://vk.com/id11226473
+https://vk.com/id126332865
+https://vk.com/id138162334
+https://vk.com/id138930291
+https://vk.com/id141890537
+https://vk.com/id158103315
+https://vk.com/id162073558
+https://vk.com/id164498894
+https://vk.com/id172964618
+https://vk.com/id180376689
+https://vk.com/id189919053
+https://vk.com/id191715057
+https://vk.com/id198814206
+https://vk.com/id202964866
+https://vk.com/id203926601
+https://vk.com/id204444005
+https://vk.com/id205399387
+https://vk.com/id208057861
+https://vk.com/id212696934
+https://vk.com/id213691204
+https://vk.com/id214768048
+https://vk.com/id232948749
+https://vk.com/id237480711
+https://vk.com/id238177237
+https://vk.com/id240251983
+https://vk.com/id251955447
+https://vk.com/id252408268
+https://vk.com/id256890071
+https://vk.com/id257676414
+https://vk.com/id266782077
+https://vk.com/id272330013
+https://vk.com/id272695908
+https://vk.com/id276424862
+https://vk.com/id279643220
+https://vk.com/id281657914
+https://vk.com/id285901242
+https://vk.com/id296509662
+https://vk.com/id298008343
+https://vk.com/id305407773
+https://vk.com/id306477594
+https://vk.com/id311076805
+https://vk.com/id313736438
+https://vk.com/id327492480
+https://vk.com/id333261395
+https://vk.com/id334090411
+https://vk.com/id335008376
+https://vk.com/id338736200
+https://vk.com/id344150432
+https://vk.com/id350541060
+https://vk.com/id354632408
+https://vk.com/id359152145
+https://vk.com/id360898472
+https://vk.com/id362971013
+https://vk.com/id376802430
+https://vk.com/id377538496
+https://vk.com/id377683598
+https://vk.com/id378095869
+https://vk.com/id392547018
+https://vk.com/id405847103
+https://vk.com/id409302344
+https://vk.com/id415431919
+https://vk.com/id487997729
+https://vk.com/id493487136
+https://vk.com/id504782589
+https://vk.com/id516460946
+https://vk.com/id527650613
+https://vk.com/id531415273
+https://vk.com/id555425242
+https://vk.com/id558433109
+https://vk.com/id565939607
+https://vk.com/id566409684
+https://vk.com/id611201999';
         $norm = str_replace('http://vk.com/id', '', explode("\n",$string));
 //        dd($norm);
         $array = [];
