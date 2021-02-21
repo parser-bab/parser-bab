@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="Добавлены события">
+    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="18">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
     </list>
@@ -222,42 +222,7 @@
       <workItem from="1613651374728" duration="1968000" />
       <workItem from="1613654356332" duration="1069000" />
       <workItem from="1613684549198" duration="2189000" />
-      <workItem from="1613943473261" duration="2999000" />
-    </task>
-    <task id="LOCAL-00050" summary="Проверка на запись группы">
-      <created>1612301777763</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1612301777764</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Проверка на запись группы">
-      <created>1612301808454</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1612301808454</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Проверка на запись группы">
-      <created>1612301936873</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1612301936873</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612302258828</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1612302258828</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612303851336</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1612303851336</updated>
+      <workItem from="1613943473261" duration="3310000" />
     </task>
     <task id="LOCAL-00055" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
       <created>1612303898006</created>
@@ -567,7 +532,42 @@
       <option name="project" value="LOCAL" />
       <updated>1613946472357</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="18">
+      <created>1613946538344</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1613946538344</updated>
+    </task>
+    <task id="LOCAL-00100" summary="18">
+      <created>1613946583275</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1613946583275</updated>
+    </task>
+    <task id="LOCAL-00101" summary="18">
+      <created>1613946620237</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1613946620237</updated>
+    </task>
+    <task id="LOCAL-00102" summary="18">
+      <created>1613946651758</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1613946651758</updated>
+    </task>
+    <task id="LOCAL-00103" summary="18">
+      <created>1613946704782</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1613946704782</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
