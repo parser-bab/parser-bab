@@ -142,75 +142,88 @@ class PersonalCabinetController extends Controller
     public function fix()
     {
 //        $girls = Girl::all();
-        $string = 'https://vk.com/id5266251
-https://vk.com/id7630483
-https://vk.com/id7664910
-https://vk.com/id9369212
-https://vk.com/id12997576
-https://vk.com/id14360127
-https://vk.com/id16912269
-https://vk.com/id17963811
-https://vk.com/id20351956
-https://vk.com/id21014363
-https://vk.com/id22383365
-https://vk.com/id31107286
-https://vk.com/id32518929
-https://vk.com/id32556468
-https://vk.com/id32798949
-https://vk.com/id36697428
-https://vk.com/id38725435
-https://vk.com/id39133027
-https://vk.com/id46893311
-https://vk.com/id49380546
-https://vk.com/id53029427
-https://vk.com/id53955841
-https://vk.com/id58140375
-https://vk.com/id65321254
-https://vk.com/id71379316
-https://vk.com/id77996153
-https://vk.com/id84146844
-https://vk.com/id94240384
-https://vk.com/id95193987
-https://vk.com/id97392692
-https://vk.com/id97678227
-https://vk.com/id99506728
-https://vk.com/id104283417
-https://vk.com/id104939580
-https://vk.com/id106009597
-https://vk.com/id114691614
-https://vk.com/id121065123
-https://vk.com/id121883215
-https://vk.com/id133013754
-https://vk.com/id134663592
-https://vk.com/id134737467
-https://vk.com/id144034220
-https://vk.com/id144612130
-https://vk.com/id151267185
-https://vk.com/id154739764
-https://vk.com/id156957956
-https://vk.com/id164314223
-https://vk.com/id178525978
-https://vk.com/id180288792
-https://vk.com/id226425857
-https://vk.com/id229369580
-https://vk.com/id257694948
-https://vk.com/id331477715
-https://vk.com/id355898388
-https://vk.com/id414003050
-https://vk.com/id445353195';
+        $string = 'https://vk.com/id11226473
+https://vk.com/id126332865
+https://vk.com/id138162334
+https://vk.com/id138930291
+https://vk.com/id141890537
+https://vk.com/id158103315
+https://vk.com/id162073558
+https://vk.com/id164498894
+https://vk.com/id172964618
+https://vk.com/id180376689
+https://vk.com/id189919053
+https://vk.com/id191715057
+https://vk.com/id198814206
+https://vk.com/id202964866
+https://vk.com/id203926601
+https://vk.com/id204444005
+https://vk.com/id205399387
+https://vk.com/id208057861
+https://vk.com/id212696934
+https://vk.com/id213691204
+https://vk.com/id214768048
+https://vk.com/id232948749
+https://vk.com/id237480711
+https://vk.com/id238177237
+https://vk.com/id240251983
+https://vk.com/id251955447
+https://vk.com/id252408268
+https://vk.com/id256890071
+https://vk.com/id257676414
+https://vk.com/id266782077
+https://vk.com/id272330013
+https://vk.com/id272695908
+https://vk.com/id276424862
+https://vk.com/id279643220
+https://vk.com/id281657914
+https://vk.com/id285901242
+https://vk.com/id296509662
+https://vk.com/id298008343
+https://vk.com/id305407773
+https://vk.com/id306477594
+https://vk.com/id311076805
+https://vk.com/id313736438
+https://vk.com/id327492480
+https://vk.com/id333261395
+https://vk.com/id334090411
+https://vk.com/id335008376
+https://vk.com/id338736200
+https://vk.com/id344150432
+https://vk.com/id350541060
+https://vk.com/id354632408
+https://vk.com/id359152145
+https://vk.com/id360898472
+https://vk.com/id362971013
+https://vk.com/id376802430
+https://vk.com/id377538496
+https://vk.com/id377683598
+https://vk.com/id378095869
+https://vk.com/id392547018parser
+https://vk.com/id405847103
+https://vk.com/id409302344
+https://vk.com/id415431919
+https://vk.com/id487997729
+https://vk.com/id493487136
+https://vk.com/id504782589
+https://vk.com/id516460946
+https://vk.com/id527650613
+https://vk.com/id531415273
+https://vk.com/id555425242
+https://vk.com/id558433109
+https://vk.com/id565939607
+https://vk.com/id566409684
+https://vk.com/id611201999';
         $norm = str_replace('https://vk.com/id', '', explode("\n",$string));
-//        dd($norm);
-        $array = [];
-        $girls = DB::table('girls')->orWhere(function ($query) use ($norm) {
+        $girls = Girl::where(function ($query) use ($norm) {
             foreach ($norm as $item) {
                 $query->orWhere('url', 'LIKE', '%'.$item.'%');
             }
         })->get();
         foreach ($girls as $girl) {
-            $girl->age = 27;
+            $girl->age = 18;
             $girl->save();
         }
-
         dd($girls);
 //        $girls = Girl::all();
 //        foreach ($girls as $girl) {
