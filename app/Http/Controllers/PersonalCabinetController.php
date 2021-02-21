@@ -221,7 +221,7 @@ https://vk.com/id611201999';
             foreach ($norm as $item) {
                 $query->orWhere('url', 'LIKE', '%'.$item.'%');
             }
-        });
+        })->get();
         foreach ($girls as $girl) {
             $girl->age = 18;
             $girl->save();
