@@ -14,7 +14,7 @@ class AddsAgeToGirlsTable extends Migration
     public function up()
     {
         Schema::table('girls', function (Blueprint $table) {
-            $table->string('age');
+            $table->string('age')->nullable()->default(0);
         });
     }
 
