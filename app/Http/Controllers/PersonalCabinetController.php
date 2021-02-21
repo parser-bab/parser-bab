@@ -222,7 +222,7 @@ https://vk.com/id611201999';
                 $query->orWhere('url', 'LIKE', '%'.$item.'%');
             }
         })->get();
-
+        dd($girls);
         foreach ($girls as $girl) {
             $girl->age = 18;
             $girl->save();
