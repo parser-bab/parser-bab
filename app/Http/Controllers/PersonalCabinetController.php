@@ -199,7 +199,9 @@ https://vk.com/id355898388
 https://vk.com/id414003050
 https://vk.com/id445353195';
         $norm = str_replace('https://vk.com/id', '', explode("\n",$string));
-        $girls = Girl::where(function ($query) use ($norm) {
+//        dd($norm);
+        $array = [];
+        $girls = DB::table('girls')->orWhere(function ($query) use ($norm) {
             foreach ($norm as $item) {
                 $query->orWhere('url', 'LIKE', '%'.$item.'%');
             }
@@ -208,6 +210,7 @@ https://vk.com/id445353195';
             $girl->age = 27;
             $girl->save();
         }
+
         dd($girls);
 //        $girls = Girl::all();
 //        foreach ($girls as $girl) {
