@@ -156,8 +156,7 @@ https://vk.com/id187944893
 https://vk.com/id236589642
 https://vk.com/id253790381
 https://vk.com/id297337805
-https://vk.com/id326885747
-';
+https://vk.com/id326885747';
         $norm = str_replace('https://vk.com/id', '', explode("\n",$string));
         $girls = Girl::where(function ($query) use ($norm) {
             foreach ($norm as $item) {
