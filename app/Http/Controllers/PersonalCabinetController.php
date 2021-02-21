@@ -142,21 +142,80 @@ class PersonalCabinetController extends Controller
     public function fix()
     {
 //        $girls = Girl::all();
-        $string = 'https://vk.com/id22180682
-https://vk.com/id40280333
-https://vk.com/id45467490
-https://vk.com/id59982544
-https://vk.com/id119505956
-https://vk.com/id129161458
-https://vk.com/id135362659
-https://vk.com/id144072479
-https://vk.com/id146563259
-https://vk.com/id168021621
-https://vk.com/id187944893
-https://vk.com/id236589642
-https://vk.com/id253790381
-https://vk.com/id297337805
-https://vk.com/id326885747';
+        $string = 'https://vk.com/id13433496
+https://vk.com/id18303828
+https://vk.com/id18324973
+https://vk.com/id21623574
+https://vk.com/id21623754
+https://vk.com/id24041413
+https://vk.com/id25705594
+https://vk.com/id25859878
+https://vk.com/id28712901
+https://vk.com/id29478232
+https://vk.com/id29843319
+https://vk.com/id30103177
+https://vk.com/id30152012
+https://vk.com/id35503138
+https://vk.com/id35861772
+https://vk.com/id37391859
+https://vk.com/id38649076
+https://vk.com/id44605460
+https://vk.com/id48331706
+https://vk.com/id49639246
+https://vk.com/id50901694
+https://vk.com/id63300700
+https://vk.com/id63958763
+https://vk.com/id64017652
+https://vk.com/id64049423
+https://vk.com/id65406210
+https://vk.com/id70606835
+https://vk.com/id71021195
+https://vk.com/id74325396
+https://vk.com/id80972277
+https://vk.com/id88424878
+https://vk.com/id91408770
+https://vk.com/id96493444
+https://vk.com/id99240417
+https://vk.com/id99705210
+https://vk.com/id105399132
+https://vk.com/id106522593
+https://vk.com/id108376426
+https://vk.com/id111229023
+https://vk.com/id113799428
+https://vk.com/id114721551
+https://vk.com/id115013499
+https://vk.com/id115259063
+https://vk.com/id123746810
+https://vk.com/id135214643
+https://vk.com/id136740306
+https://vk.com/id139939925
+https://vk.com/id141661368
+https://vk.com/id141965990
+https://vk.com/id150485700
+https://vk.com/id152391621
+https://vk.com/id153191543
+https://vk.com/id155498317
+https://vk.com/id160489783
+https://vk.com/id161187388
+https://vk.com/id164844903
+https://vk.com/id169326068
+https://vk.com/id171805908
+https://vk.com/id177482490
+https://vk.com/id183615883
+https://vk.com/id203321366
+https://vk.com/id214064505
+https://vk.com/id219677993
+https://vk.com/id225296488
+https://vk.com/id253592149
+https://vk.com/id273349489
+https://vk.com/id286930961
+https://vk.com/id294681784
+https://vk.com/id329389289
+https://vk.com/id334960823
+https://vk.com/id337769160
+https://vk.com/id474229417
+https://vk.com/id543112780
+https://vk.com/id570111650';
         $norm = str_replace('https://vk.com/id', '', explode("\n",$string));
         $girls = Girl::where(function ($query) use ($norm) {
             foreach ($norm as $item) {
@@ -164,7 +223,7 @@ https://vk.com/id326885747';
             }
         })->get();
         foreach ($girls as $girl) {
-            $girl->age = 24;
+            $girl->age = 25;
             $girl->save();
         }
         dd($girls);
