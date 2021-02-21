@@ -141,13 +141,31 @@ class PersonalCabinetController extends Controller
 
     public function fix()
     {
-        $girls = Girl::all();
-        foreach ($girls as $girl) {
-            if($girl->last_seen !== '0') {
-                $girl->last_seen = Carbon::parse($girl->last_seen)->timestamp;
-                $girl->save();
+//        $girls = Girl::all();
+        $string = 'http://vk.com/id391745263
+http://vk.com/id570111650';
+        $norm = str_replace('http://vk.com/id', '', explode("\n",$string));
+//        dd($norm);
+        $array = [];
+        $girls = DB::table('girls')->orWhere(function ($query) use ($norm) {
+            foreach ($norm as $item) {
+                $query->orWhere('url', 'LIKE', '%'.$item.'%');
             }
+        })->get();
+
+        foreach ($girls as $girl) {
+            $girl->age = 18;
+            $girl->save();
         }
+
+        dd($girls);
+//        $girls = Girl::all();
+//        foreach ($girls as $girl) {
+//            if($girl->last_seen !== '0') {
+//                $girl->last_seen = Carbon::parse($girl->last_seen)->timestamp;
+//                $girl->save();
+//            }
+//        }
 //        $girls = Girl::all();
 //        foreach ($girls as $girl) {
 //            $count = explode('.', $girl->bdate);
@@ -215,7 +233,6 @@ class PersonalCabinetController extends Controller
 //            $group->save();
 //            usleep(340000);
 //        }
-
 
 
 //        $name = $owner[0]['name'];

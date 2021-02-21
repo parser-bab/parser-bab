@@ -47,6 +47,7 @@
                             @endif
                         @endif
                         <th>Онлайн</th>
+                        <th>Возраст</th>
                         <th>Имя</th>
                         <th>Фамилия</th>
                         <th>Дата</th>
@@ -112,6 +113,7 @@
                                     @endif
                                 @endif
                                 <td class="align-middle"><h3>{{\Carbon\Carbon::createFromTimestamp($list->last_seen)->addHours(2)->format('d.m.Y H:i')}}</h3></td>
+                                <td class="align-middle"><h3>{{$list->age}}</h3></td>
                                 <td class="align-middle"><h3>{{$list->first_name}}</h3></td>
                                 <td class="align-middle"><h3>{{$list->last_name}}</h3></td>
                                 <td class="align-middle"><h3>{{$list->bdate}}</h3></td>
