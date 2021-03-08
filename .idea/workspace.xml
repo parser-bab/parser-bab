@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="18">
+    <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="24">
+      <change afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/listMusic.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/createMusic.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/indexMusic.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/listGirlMusic.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/CheckUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/CheckUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,62 +233,8 @@
       <workItem from="1613654356332" duration="1069000" />
       <workItem from="1613684549198" duration="2189000" />
       <workItem from="1613943473261" duration="3310000" />
-    </task>
-    <task id="LOCAL-00057" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612304039350</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1612304039350</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612304067594</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1612304067594</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612304232779</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1612304232779</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612304467861</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1612304467862</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612304858304</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1612304858304</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612362338268</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1612362338268</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;app/Http/Controllers/PersonalCabinetController.php">
-      <created>1612362400483</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1612362400484</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Увеличен шрифт, добавлена сортировка">
-      <created>1612442199519</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1612442199519</updated>
+      <workItem from="1614547168367" duration="5470000" />
+      <workItem from="1615205446365" duration="3433000" />
     </task>
     <task id="LOCAL-00065" summary="Добавлен редирект">
       <created>1612443153687</created>
@@ -567,7 +523,63 @@
       <option name="project" value="LOCAL" />
       <updated>1613948907160</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="20">
+      <created>1613948935417</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1613948935417</updated>
+    </task>
+    <task id="LOCAL-00107" summary="21">
+      <created>1613948987704</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1613948987704</updated>
+    </task>
+    <task id="LOCAL-00108" summary="22">
+      <created>1613949015544</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1613949015544</updated>
+    </task>
+    <task id="LOCAL-00109" summary="23">
+      <created>1613949043502</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1613949043502</updated>
+    </task>
+    <task id="LOCAL-00110" summary="24">
+      <created>1613949071212</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1613949071212</updated>
+    </task>
+    <task id="LOCAL-00111" summary="25">
+      <created>1613949096218</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1613949096218</updated>
+    </task>
+    <task id="LOCAL-00112" summary="26">
+      <created>1613949134827</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1613949134827</updated>
+    </task>
+    <task id="LOCAL-00113" summary="27">
+      <created>1613949159958</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1613949159958</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,14 +598,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлен фикс" />
-    <MESSAGE value="Удаляем группу" />
-    <MESSAGE value="Добавлено обнуление счетчика" />
-    <MESSAGE value="Добавлен sbros" />
-    <MESSAGE value="Добавлен post" />
-    <MESSAGE value="Добавлена дата рождения" />
-    <MESSAGE value="Добавлено модальное окно удаления, нормальные мидлвары" />
-    <MESSAGE value="Добавлена страница" />
     <MESSAGE value="Добавлена пагинация" />
     <MESSAGE value="Фикс возраста" />
     <MESSAGE value="Пагинация" />
@@ -611,7 +615,15 @@
     <MESSAGE value="Миграция" />
     <MESSAGE value="18" />
     <MESSAGE value="19" />
-    <option name="LAST_COMMIT_MESSAGE" value="19" />
+    <MESSAGE value="20" />
+    <MESSAGE value="21" />
+    <MESSAGE value="22" />
+    <MESSAGE value="23" />
+    <MESSAGE value="24" />
+    <MESSAGE value="25" />
+    <MESSAGE value="26" />
+    <MESSAGE value="27" />
+    <option name="LAST_COMMIT_MESSAGE" value="27" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

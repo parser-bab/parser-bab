@@ -15,13 +15,25 @@ use Illuminate\Support\Facades\Route;
 Route::post('/setpisal', 'GirlController@setPisal');
 Route::post('/setwrite', 'GirlController@setWrite');
 
+Route::post('/setpisalmusic', 'GirlController@setPisalMusic');
+Route::post('/setwritemusic', 'GirlController@setWriteMusic');
+
 
 
 Route::get('/', 'PersonalCabinetController@index')->name('PersonalCabinet');
+Route::get('/indexByDateMusic', 'ListController@indexByDateMusic')->name('indexByDateMusic');
+Route::get('/indexNormMusic', 'ListController@indexNormMusic')->name('indexNormMusic');
+Route::get('/indexByCountMusic', 'ListController@indexByCount')->name('indexByCount');
+Route::get('/indexMusicAll', 'ListController@indexMusicAll')->name('indexMusicAll');
 
 Route::get('/create-task', 'PersonalCabinetController@createTask')->name('PersonalCabinetCreateTask');
 Route::post('/create-task', 'PersonalCabinetController@storeTask')->name('PersonalCabinetStoreTask');
 Route::post('/check-task', 'PersonalCabinetController@checkTask');
+
+
+Route::get('/create-music', 'PersonalCabinetController@createMusic')->name('PersonalCabinetCreateMusic');
+Route::get('/create-music/{music}', 'PersonalCabinetController@showMusic')->name('PersonalCabinetShowMusic');
+Route::post('/store-music', 'PersonalCabinetController@storeMusic')->name('PersonalCabinetStoreMusic');
 
 
 Route::resource('/application', 'ApplicationController');
@@ -46,6 +58,8 @@ Route::resource('/girl', 'GirlController');
 Route::get('/online', 'GirlController@online')->name('girl.online');
 Route::get('/online/update', 'GirlController@updateOnline')->name('girl.update.online');
 Route::post('/deletegirl', 'ListController@destroyApi');
+Route::post('/deletegirlmusic', 'ListController@destroyApiMusic');
+
 Route::resource('/task', 'TaskController');
 Route::get('list/removedata', 'ListController@removedata')->name('list.removedata');
 
@@ -60,3 +74,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get ('/pizdec', 'PersonalCabinetController@fix');
+
+Route::get('/music', 'PersonalCabinetController@indexMusic')->name('music');

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Chicken;
 use App\Girl;
 use App\Jobs\CheckUpdate;
 use App\Jobs\StartTask;
+use App\MusicGirl;
 use App\UpdateOnline;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -102,6 +104,20 @@ class GirlController extends Controller
 
     public function setWrite(Request $request) {
         $girl = Girl::find($request->input('id'));
+        $girl->write = $request->input('write');
+        $girl->save();
+        return response()->json($girl,200);
+    }
+
+    public function setPisalMusic(Request $request) {
+        $girl = Chicken::find($request->input('id'));
+        $girl->is_pisal = $request->input('is_pisal');
+        $girl->save();
+        return response()->json($girl,200);
+    }
+
+    public function setWriteMusic(Request $request) {
+        $girl = Chicken::find($request->input('id'));
         $girl->write = $request->input('write');
         $girl->save();
         return response()->json($girl,200);

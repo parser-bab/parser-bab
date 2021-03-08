@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Chicken;
 use App\Events\CheckUpdateEvent;
 use App\Girl;
 use Carbon\Carbon;
@@ -68,5 +69,37 @@ class CheckUpdate implements ShouldQueue
             }
             $offset += 1000;
         }
+
+        $girls = Chicken::all();
+        $girls_count = Chicken::all()->count();
+        $count = ceil($girls_count/1000);
+        $offset = 0;
+        $counter = 0;
+
+        for ($i = 0; $i < $count; ++$i) {
+            $girl_list = $girls->slice($offset, 1000);
+            $profilesId = [];
+            foreach($girl_list as $girl) {
+                $removeChar = ["https://", "http://", "/", 'vk.com', 'id'];
+                $girl_id = str_replace($removeChar, "", $girl->url);
+                $profilesId[] = $girl_id;
+            }
+
+            $getInfoUser = $vk->users()->get($access_token, array(
+                'user_ids' => $profilesId,
+                'fields' => 'photo_200,city,sex,bdate,last_seen'
+            ));
+            foreach ($getInfoUser as $user) {
+                if (isset($user['last_seen']['time'])) {
+                    $girl_new = Chicken::where('url', 'like', '%'.$user['id'])->first();
+                    $girl_new->last_seen = $user['last_seen']['time'];
+                    $girl_new->save();
+                }
+                ++$counter;
+                event(new CheckUpdateEvent($counter));
+            }
+            $offset += 1000;
+        }
+
     }
 }

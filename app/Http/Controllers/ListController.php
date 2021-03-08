@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Chicken;
 use App\Girl;
+use App\MusicGirl;
 use Illuminate\Http\Request;
 
 class ListController extends Controller
@@ -46,6 +48,42 @@ class ListController extends Controller
             ->withCount('groups')
             ->paginate(30);
         return view('list', compact('lists'));
+    }
+
+    public function indexMusicAll()
+    {
+        $lists = Chicken::with('notes')->paginate(30);
+        return view('listGirlMusic', compact('lists'));
+    }
+
+
+    public function indexNormMusic()
+    {
+        $lists = Chicken::where('write', 1)->with('notes')->withCount('notes')
+            ->paginate(30);
+        return view('listGirlMusic', compact('lists'));
+    }
+
+    public function indexByCount()
+    {
+        $lists = Chicken::where('write', 1)
+            ->with('notes')
+            ->withCount('notes')
+            ->orderByDesc('notes_count')
+            ->orderBy('first_name')
+            ->paginate(30);
+        return view('listGirlMusic', compact('lists'));
+    }
+
+
+    public function indexByDateMusic()
+    {
+        $lists = Chicken::where('write', 1)
+            ->orderByDesc('last_seen')
+            ->with('notes')
+            ->withCount('notes')
+            ->paginate(30);
+        return view('listGirlMusic', compact('lists'));
     }
 
     /**
@@ -127,6 +165,14 @@ class ListController extends Controller
         $posts = $girl->posts()->get();
         $girl->groups()->detach($groups);
         $girl->posts()->detach($posts);
+        $girl->delete();
+    }
+
+    public function destroyApiMusic(Request $request)
+    {
+        $girl = MusicGirl::findOrFail($request->input('id'));
+        $musics = $girl->musics()->get();
+        $girl->musics()->detach($musics);
         $girl->delete();
     }
 

@@ -8,7 +8,10 @@ use App\Application;
 use App\Events\TaskUpdated;
 use App\Girl;
 use App\Group;
+use App\Jobs\MusicJob;
 use App\Jobs\StartTask;
+use App\Music;
+use App\Note;
 use App\Post;
 use App\Task;
 use App\User;
@@ -110,6 +113,44 @@ class PersonalCabinetController extends Controller
         return redirect()->route('PersonalCabinet');
     }
 
+
+
+
+    public function indexMusic()
+    {
+        $musics = Note::withCount('chickens')->get();
+        return view('indexMusic', compact('musics'));
+    }
+
+    public function showMusic($id)
+    {
+        $music = Note::findOrFail($id);
+        $lists = $music->chickens()->with('notes')->paginate(30);
+        return view('listGirlMusic', compact('lists'));
+    }
+
+    public function createMusic()
+    {
+        return view('createMusic');
+    }
+
+    public function storeMusic(Request $request)
+    {
+        $girls_id = $request->input('girl_id');
+        $norm = str_replace('https://vk.com/id', '', explode("\r\n",$girls_id));
+        $music = Note::where('title', 'LIKE', '%'.$request->input('title').'%')->first();
+        if (!$music) {
+            $music = new Note();
+            $music->title = $request->input('title');
+            $music->save();
+        }
+        $job = (new MusicJob($norm, $music));
+        $this->dispatch($job);
+        return redirect()->route('music');
+    }
+
+
+
     public function logs()
     {
         $data = DB::table('failed_jobs')->get();
@@ -138,6 +179,7 @@ class PersonalCabinetController extends Controller
         $task = Task::where('title', $name)->get();
         return response()->json($task, 200);
     }
+
 
     public function fix()
     {
