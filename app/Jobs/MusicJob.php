@@ -22,11 +22,13 @@ class MusicJob implements ShouldQueue
      */
     public $id;
     public $music;
+    public $access_token;
 
-    public function __construct($id, $music)
+    public function __construct($id, $music, $access_token)
     {
         $this->id = $id;
         $this->music = $music;
+        $this->access_token = $access_token;
     }
 
     /**
@@ -36,9 +38,9 @@ class MusicJob implements ShouldQueue
      */
     public function handle()
     {
-        $access_token = auth()->user()->vk_token;
+
         $vk = new VKApiClient();
-        $getInfoUser = $vk->users()->get($access_token, array(
+        $getInfoUser = $vk->users()->get($this->access_token, array(
             'user_ids' => $this->id,
             'fields' => 'photo_200,city,sex,bdate,last_seen'
         ));

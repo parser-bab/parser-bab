@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="24">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,14 +224,7 @@
       <workItem from="1613943473261" duration="3310000" />
       <workItem from="1614547168367" duration="5470000" />
       <workItem from="1615205446365" duration="3760000" />
-      <workItem from="1615225454893" duration="108000" />
-    </task>
-    <task id="LOCAL-00066" summary="Добавлена сортировка по имени">
-      <created>1612443804128</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1612443804128</updated>
+      <workItem from="1615225454893" duration="536000" />
     </task>
     <task id="LOCAL-00067" summary="Добавлено создание приложений и выбор">
       <created>1612703330433</created>
@@ -571,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615210785754</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Исправлен поиск музыки">
+      <created>1615225690762</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1615225690763</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +588,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Фикс возраста" />
     <MESSAGE value="Пагинация" />
     <MESSAGE value="Добавлена новая отметка &quot;написать&quot;" />
     <MESSAGE value="Добавлен индикатор" />
@@ -615,7 +612,8 @@
     <MESSAGE value="26" />
     <MESSAGE value="27" />
     <MESSAGE value="Добавлена музыка" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена музыка" />
+    <MESSAGE value="Исправлен поиск музыки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлен поиск музыки" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

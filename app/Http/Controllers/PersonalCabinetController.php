@@ -32,6 +32,7 @@ class PersonalCabinetController extends Controller
 
     public function index(Request $request)
     {
+
         $tasks = Task::all();
 //        $job = new StartTask();
 //        $this->dispatch($job);
@@ -144,7 +145,8 @@ class PersonalCabinetController extends Controller
             $music->title = $request->input('title');
             $music->save();
         }
-        $job = (new MusicJob($norm, $music));
+        $token = auth()->user()->vk_token;
+        $job = (new MusicJob($norm, $music, $token));
         $this->dispatch($job);
         return redirect()->route('music');
     }
