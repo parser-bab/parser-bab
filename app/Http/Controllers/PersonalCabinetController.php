@@ -138,7 +138,7 @@ class PersonalCabinetController extends Controller
     {
         $girls_id = $request->input('girl_id');
         $norm = str_replace('https://vk.com/id', '', explode("\r\n",$girls_id));
-        $music = Note::where('title', 'LIKE', '%'.$request->input('title').'%')->first();
+        $music = Note::where('title', $request->input('title'))->first();
         if (!$music) {
             $music = new Note();
             $music->title = $request->input('title');
