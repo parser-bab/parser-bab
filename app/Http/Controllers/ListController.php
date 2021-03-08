@@ -66,8 +66,7 @@ class ListController extends Controller
 
     public function indexByCount()
     {
-        $lists = Chicken::where('write', 1)
-            ->with('notes')
+        $lists = Chicken::with('notes')
             ->withCount('notes')
             ->orderByDesc('notes_count')
             ->orderBy('first_name')
