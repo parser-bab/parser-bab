@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e585a28-6b47-4513-81c5-7e30b6d64d2b" name="Default Changelist" comment="24">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/FindGirl.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/findGirl.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GirlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/laravel-echo-setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/laravel-echo-setup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/PersonalCabinet/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,13 +240,10 @@
       <workItem from="1614547168367" duration="5470000" />
       <workItem from="1615205446365" duration="3760000" />
       <workItem from="1615225454893" duration="1344000" />
-    </task>
-    <task id="LOCAL-00068" summary="Добавлен индикатор работы">
-      <created>1612704579460</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1612704579460</updated>
+      <workItem from="1615230277619" duration="670000" />
+      <workItem from="1615642272077" duration="3760000" />
+      <workItem from="1615651043177" duration="49000" />
+      <workItem from="1615651107987" duration="1436000" />
     </task>
     <task id="LOCAL-00069" summary="Добавлен индикатор">
       <created>1612707331640</created>
@@ -570,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615226167620</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Добавлена сортировка">
+      <created>1615230345581</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1615230345581</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +607,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлена новая отметка &quot;написать&quot;" />
     <MESSAGE value="Добавлен индикатор" />
     <MESSAGE value="Добавлен запрос" />
     <MESSAGE value="Добавлено время онлайа" />
@@ -614,7 +631,8 @@
     <MESSAGE value="Добавлена музыка" />
     <MESSAGE value="Исправлен поиск музыки" />
     <MESSAGE value="Исправлен токен" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен токен" />
+    <MESSAGE value="Добавлена сортировка" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена сортировка" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

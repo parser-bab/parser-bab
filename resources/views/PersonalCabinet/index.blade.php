@@ -23,6 +23,7 @@
                             <a class="btn btn-primary" href="{{route('application.create')}}">Добавить приложение</a>
                             <a class="btn btn-primary" href="{{route('application.index')}}">Показать приложения</a>
                             <a class="btn btn-primary" href="{{route('girl.online')}}">Обновить онлайн</a>
+                            <a class="btn btn-primary" href="{{route('findGirl')}}">Поиск</a>
                         @endif
                     @endif
                     <a class="btn btn-primary" href="{{route('list.index')}}">Все бабы</a>

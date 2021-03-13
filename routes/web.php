@@ -76,3 +76,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get ('/pizdec', 'PersonalCabinetController@fix');
 
 Route::get('/music', 'PersonalCabinetController@indexMusic')->name('music');
+
+Route::post('/findgirl', 'GirlController@findGirl');
+Route::get('/findgirl', 'PersonalCabinetController@findGirl')->name('findGirl');

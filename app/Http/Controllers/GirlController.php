@@ -139,4 +139,15 @@ class GirlController extends Controller
         return redirect()->route('girl.online');
     }
 
+    public function findGirl(Request $request)
+    {
+//        return response()->json($request->input('title'), 200);
+        $name = explode(" ", $request->input('title'));
+        $girl = Girl::where('first_name', $name[0])
+            ->where('last_name', $name[1])
+            ->with('groups')
+            ->get();
+        return response()->json($girl, 200);
+    }
+
 }

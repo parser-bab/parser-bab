@@ -182,6 +182,11 @@ class PersonalCabinetController extends Controller
         return response()->json($task, 200);
     }
 
+    public function findGirl()
+    {
+        return view('PersonalCabinet.findGirl');
+    }
+
 
     public function fix()
     {
