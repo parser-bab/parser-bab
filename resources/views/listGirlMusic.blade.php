@@ -110,7 +110,7 @@
                                         </td>
                                     @endif
                                 @endif
-                                <td class="align-middle"><h3>{{\Carbon\Carbon::createFromTimestamp($list->last_seen)->addHours(2)->format('d.m.Y H:i')}}</h3></td>
+                                <td class="align-middle"><h3>{{\Carbon\Carbon::createFromTimestamp($list->last_seen)->addHours(3)->format('d.m.Y H:i')}}</h3></td>
                                 <td class="align-middle">
                                     @foreach($list->notes as $note)
                                         <h3>| {{$note->title}} |</h3>
