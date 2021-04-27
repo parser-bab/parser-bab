@@ -62,6 +62,7 @@ class CheckUpdate implements ShouldQueue
                 if (isset($user['last_seen']['time'])) {
                     $girl_new = Girl::where('url', 'like', '%'.$user['id'])->first();
                     $girl_new->last_seen = $user['last_seen']['time'];
+                    $girl_new->photo = $user['photo_200'];
                     $girl_new->save();
                 }
                 ++$counter;
@@ -93,6 +94,7 @@ class CheckUpdate implements ShouldQueue
                 if (isset($user['last_seen']['time'])) {
                     $girl_new = Chicken::where('url', 'like', '%'.$user['id'])->first();
                     $girl_new->last_seen = $user['last_seen']['time'];
+                    $girl_new->photo = $user['photo_200'];
                     $girl_new->save();
                 }
                 ++$counter;

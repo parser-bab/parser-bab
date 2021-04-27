@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalCabinetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/CheckUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/CheckUpdate.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,13 +237,8 @@
       <workItem from="1615836459082" duration="624000" />
       <workItem from="1616176350905" duration="577000" />
       <workItem from="1616178888275" duration="641000" />
-    </task>
-    <task id="LOCAL-00070" summary="Добавлено отображение для каждой задачи">
-      <created>1612707402164</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1612707402165</updated>
+      <workItem from="1617050108642" duration="864000" />
+      <workItem from="1619536752645" duration="294000" />
     </task>
     <task id="LOCAL-00071" summary="Добавлена проверка групп и чек">
       <created>1612718381968</created>
@@ -580,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615652714778</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="Исправлено время онлайна">
+      <created>1617050260771</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1617050260771</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +602,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлен запрос" />
     <MESSAGE value="Добавлено время онлайа" />
     <MESSAGE value="Добавлены события" />
     <MESSAGE value="Исправлена ошибка с сохранением" />
@@ -624,7 +626,8 @@
     <MESSAGE value="Исправлен токен" />
     <MESSAGE value="Добавлена сортировка" />
     <MESSAGE value="Добавлен поиск" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен поиск" />
+    <MESSAGE value="Исправлено время онлайна" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлено время онлайна" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
