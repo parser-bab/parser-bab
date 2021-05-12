@@ -190,6 +190,10 @@ class PersonalCabinetController extends Controller
 
     public function fix()
     {
+        $girls = Girl::where('is_pisal', 0)
+            ->where('write', 0)
+            ->get();
+        dd($girls);
 //        $girls = Girl::all();
         $string = 'https://vk.com/id5266251
 https://vk.com/id7630483
